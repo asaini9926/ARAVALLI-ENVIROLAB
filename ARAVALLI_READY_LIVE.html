@@ -175,16 +175,18 @@
     }
 
     .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      border-color: var(--gold);
+      background: linear-gradient(135deg, #f5b000 0%, #e69d00 100%);
+      color: #0b1a36;
+      border: 1px solid #ffd466;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(245, 176, 0, .28);
     }
 
     .btn-primary:hover, .btn-primary:active {
-      background: var(--gold-hover);
-      border-color: var(--gold-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(244, 180, 0, .3);
+      background: linear-gradient(135deg, #ffc01e 0%, #f0a600 100%);
+      border-color: #ffe082;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 176, 0, .42);
     }
 
     .btn-dark {
@@ -200,30 +202,33 @@
     }
 
     .btn-whatsapp {
-      background: var(--wa-green);
+      background: linear-gradient(135deg, #1ea952 0%, #15803d 100%);
       color: #fff;
-      border-color: var(--wa-green);
+      border: 1px solid #2ecc71;
+      box-shadow: 0 4px 14px rgba(22, 163, 74, .28);
     }
 
     .btn-whatsapp:hover, .btn-whatsapp:active {
-      background: var(--wa-hover);
-      border-color: var(--wa-hover);
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      border-color: #4ade80;
       color: #fff;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 22px rgba(37, 211, 102, .28);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, .42);
     }
 
     .btn-call {
-      background: #fff;
-      color: var(--navy);
-      border-color: #fff;
+      background: linear-gradient(135deg, #1c3c70 0%, #122a50 100%);
+      color: #ffffff;
+      border: 1px solid #3361a8;
+      box-shadow: 0 4px 14px rgba(11, 26, 54, .35);
     }
 
     .btn-call:hover, .btn-call:active {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--navy);
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, #254d8c 0%, #173563 100%);
+      border-color: #4a7ecb;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(11, 26, 54, .5);
     }
 
     .btn-call-outline {
@@ -251,15 +256,17 @@
     }
 
     .btn-ghost {
-      border: 1px solid rgba(255, 255, 255, .4);
-      color: #fff;
-      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .25);
+      color: #d1dded;
+      background: rgba(255, 255, 255, .05);
+      backdrop-filter: blur(4px);
     }
 
     .btn-ghost:hover, .btn-ghost:active {
-      background: #fff;
-      color: var(--navy);
-      border-color: #fff;
+      background: rgba(255, 255, 255, .14);
+      border-color: rgba(255, 255, 255, .6);
+      color: #fff;
+      transform: translateY(-2px);
     }
 
     .btn-ghost-dark {
@@ -2131,12 +2138,15 @@
         font-size: 12.5px;
       }
 
-      .hero-actions .btn-whatsapp,
-      .hero-actions .btn-call {
+      .hero-actions .btn-call,
+      .hero-actions .btn-whatsapp {
         width: 100%;
         min-height: 46px;
         font-size: 11px;
         padding: 0 8px;
+        gap: 6px;
+        letter-spacing: .03em;
+        white-space: nowrap;
       }
 
       .hero-actions .btn-ghost {
@@ -2795,16 +2805,19 @@
 
       .mobile-sticky-bar {
         display: grid;
-        grid-template-columns: 1fr 1.15fr 1fr;
+        grid-template-columns: 1fr 1.05fr 1.25fr;
         position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
-        height: 56px;
+        height: 60px;
         z-index: 95;
-        background: #fff;
-        border-top: 1px solid var(--line);
-        box-shadow: 0 -4px 18px rgba(11, 26, 54, .12);
+        background: #0b1a36;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        box-shadow: 0 -4px 22px rgba(0, 0, 0, .35);
+        padding: 6px 8px;
+        gap: 8px;
+        box-sizing: border-box;
       }
 
       .mobile-sticky-btn {
@@ -2813,43 +2826,52 @@
         align-items: center;
         justify-content: center;
         gap: 3px;
-        padding: 6px 2px;
+        padding: 4px 6px;
         font-size: 10px;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: .03em;
+        letter-spacing: .04em;
         text-align: center;
-        border-right: 1px solid var(--line);
+        border-radius: 6px;
         text-decoration: none;
+        transition: .18s ease;
         -webkit-tap-highlight-color: transparent;
       }
 
-      .mobile-sticky-btn:last-child {
-        border-right: 0;
+      .mobile-sticky-btn.call {
+        background: rgba(255, 255, 255, .08);
+        border: 1px solid rgba(255, 255, 255, .18);
+        color: #ffffff;
       }
 
-      .mobile-sticky-btn.call {
-        background: var(--navy);
-        color: #fff;
+      .mobile-sticky-btn.call:active {
+        background: rgba(255, 255, 255, .18);
       }
 
       .mobile-sticky-btn.wa {
-        background: var(--wa-green);
-        color: #fff;
+        background: rgba(37, 211, 102, .16);
+        border: 1px solid rgba(37, 211, 102, .38);
+        color: #25d366;
+      }
+
+      .mobile-sticky-btn.wa:active {
+        background: rgba(37, 211, 102, .28);
       }
 
       .mobile-sticky-btn.enq {
-        background: var(--gold);
-        color: var(--navy);
+        background: linear-gradient(135deg, #f5b000 0%, #e69d00 100%);
+        border: 1px solid #ffd466;
+        color: #0b1a36;
+        box-shadow: 0 2px 10px rgba(245, 176, 0, .32);
       }
 
-      .mobile-sticky-btn:active {
-        filter: brightness(0.92);
+      .mobile-sticky-btn.enq:active {
+        filter: brightness(1.1);
       }
 
       .mobile-sticky-btn svg {
-        width: 17px;
-        height: 17px;
+        width: 16px;
+        height: 16px;
       }
 
       /* Footer */
@@ -2892,12 +2914,36 @@
       }
 
       .hero-actions {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
       }
 
-      .hero-actions .btn-whatsapp,
-      .hero-actions .btn-call {
+      .hero-actions .btn-primary {
         grid-column: 1 / -1;
+      }
+
+      .hero-actions .btn-call,
+      .hero-actions .btn-whatsapp {
+        grid-column: auto;
+        min-height: 46px;
+        font-size: 11px;
+        padding: 0 6px;
+        gap: 5px;
+        letter-spacing: .03em;
+        white-space: nowrap;
+      }
+
+      .hero-actions .btn-ghost {
+        grid-column: 1 / -1;
+      }
+
+      @media (max-width: 350px) {
+        .hero-actions .btn-call,
+        .hero-actions .btn-whatsapp {
+          font-size: 10px;
+          padding: 0 4px;
+          gap: 4px;
+        }
       }
 
       .hero-card .split {
@@ -3021,14 +3067,15 @@
           <p class="hero-lead">Aravalli Envirolab and Consultancy Services brings together professional environmental consultancy and a dedicated construction material &amp; mineral testing laboratory under one platform, with direct technical support across Jaipur and Kotputli-Behror districts.</p>
           
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#enquiry">Enquire Now</a>
-            
-            <a class="btn btn-whatsapp"
-              target="_blank" rel="noopener" href="https://wa.me/919376590132?text=Hello%20Aravalli%20Envirolab%20and%20Consultancy%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry.">
-              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M17.5 12a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Zm-5.5 9a9 9 0 0 1-4.5-1.2L3 21l1.3-4.4A9 9 0 1 1 12 21Zm4-6.6c-.2-.1-1.2-.6-1.4-.7-.2 0-.3-.1-.5.1-.2.2-.5.7-.6.8-.1.1-.2.1-.4 0-1.2-.6-2-1.1-2.8-2.4-.2-.4.2-.4.6-1.1.1-.2.1-.3 0-.5s-.5-1.2-.7-1.7c-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 2s.8 2.4 1 2.6c.1.2 1.6 2.4 3.9 3.4 1.4.6 1.9.7 2.7.6.4-.1 1.2-.5 1.4-1 .2-.4.2-.8.1-.9-.1-.1-.3-.2-.5-.3Z"/>
+            <a class="btn btn-primary" href="#enquiry">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <line x1="10" y1="9" x2="8" y2="9"></line>
               </svg>
-              WhatsApp Enquiry
+              Enquire Now
             </a>
 
             <a class="btn btn-call" href="tel:+919376590132">
@@ -3038,7 +3085,20 @@
               Call for Enquiry
             </a>
 
-            <a class="btn btn-ghost" href="#services">Explore Services</a>
+            <a class="btn btn-whatsapp"
+              target="_blank" rel="noopener" href="https://wa.me/919376590132?text=Hello%20Aravalli%20Envirolab%20and%20Consultancy%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry.">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M17.5 12a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Zm-5.5 9a9 9 0 0 1-4.5-1.2L3 21l1.3-4.4A9 9 0 1 1 12 21Zm4-6.6c-.2-.1-1.2-.6-1.4-.7-.2 0-.3-.1-.5.1-.2.2-.5.7-.6.8-.1.1-.2.1-.4 0-1.2-.6-2-1.1-2.8-2.4-.2-.4.2-.4.6-1.1.1-.2.1-.3 0-.5s-.5-1.2-.7-1.7c-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 2s.8 2.4 1 2.6c.1.2 1.6 2.4 3.9 3.4 1.4.6 1.9.7 2.7.6.4-.1 1.2-.5 1.4-1 .2-.4.2-.8.1-.9-.1-.1-.3-.2-.5-.3Z"/>
+              </svg>
+              WhatsApp Enquiry
+            </a>
+
+            <a class="btn btn-ghost" href="#services">
+              Explore Services
+              <svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-left:2px;">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
 
           <div class="hero-rail">
