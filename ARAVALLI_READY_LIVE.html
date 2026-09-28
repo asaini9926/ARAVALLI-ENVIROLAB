@@ -987,15 +987,16 @@
         </div>
 
         <div class="lg:col-span-8 min-w-0 reveal">
-          <div class="flex gap-8 border-b border-line overflow-x-auto no-scrollbar" role="tablist">
-            <button type="button" class="tab-btn is-active shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-compare">CTE vs CTO</button>
-            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-cat">Categories (Red/Orange/Green)</button>
-            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-docs">Documents Required</button>
+          <div class="flex gap-4 sm:gap-8 border-b border-line overflow-x-auto no-scrollbar" role="tablist">
+            <button type="button" class="tab-btn is-active shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[13px] sm:text-[15px] font-semibold text-slate-400" data-tab="tab-compare">CTE vs CTO</button>
+            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[13px] sm:text-[15px] font-semibold text-slate-400" data-tab="tab-cat">Categories <span class="hidden sm:inline">(Red/Orange/Green)</span></button>
+            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[13px] sm:text-[15px] font-semibold text-slate-400" data-tab="tab-docs">Documents <span class="hidden sm:inline">Required</span></button>
           </div>
 
           <!-- Tab 1: Comparison Table -->
-          <div id="tab-compare" class="tab-panel is-active pt-8">
-            <div class="overflow-x-auto no-scrollbar">
+          <div id="tab-compare" class="tab-panel is-active pt-6 sm:pt-8">
+            <!-- Desktop Table (visible on md and larger viewports) -->
+            <div class="hidden md:block overflow-x-auto no-scrollbar">
               <table class="w-full min-w-[560px] text-left text-[15px]">
                 <thead>
                   <tr class="border-b-2 border-heading text-heading">
@@ -1007,11 +1008,79 @@
                 <tbody class="divide-y divide-line">
                   <tr><td class="py-4 pr-4 font-semibold text-heading">When Required</td><td class="py-4 pr-4">Prior to any site construction or plant expansion</td><td class="py-4">Post construction, before commencing operations</td></tr>
                   <tr><td class="py-4 pr-4 font-semibold text-heading">Board Scrutiny</td><td class="py-4 pr-4">Site suitability, layout and proposed control design</td><td class="py-4">Installed systems and physical lab test reports</td></tr>
-                  <tr><td class="py-4 pr-4 font-semibold text-heading">Typical Timeline</td><td class="py-4 pr-4">30 to 60 working days</td><td class="py-4">30 to 45 working days</td></tr>
+                  <tr><td class="py-4 pr-4 font-semibold text-heading">Typical Timeline</td><td class="py-4 pr-4 font-semibold text-heading">30 to 60 working days</td><td class="py-4 font-semibold text-heading">30 to 45 working days</td></tr>
                   <tr><td class="py-4 pr-4 font-semibold text-heading">Validity Period</td><td class="py-4 pr-4">Until project completion or period fixed by board</td><td class="py-4">1 to 5 years depending on category, renewable</td></tr>
                 </tbody>
               </table>
             </div>
+
+            <!-- Mobile Responsive Comparison (Zero horizontal scroll, generous 50/50 side-by-side reading) -->
+            <div class="md:hidden space-y-3">
+              <!-- Item 1: When Required -->
+              <div class="border border-line bg-white p-4 shadow-xs">
+                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">01 &middot; Timing</span>
+                <h4 class="text-[15px] font-bold text-heading mt-0.5">When is it required?</h4>
+                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
+                  <div class="pr-2 border-r border-line">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
+                    <p class="text-slate-700 leading-snug">Prior to any site construction or plant expansion</p>
+                  </div>
+                  <div class="pl-1">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
+                    <p class="text-slate-700 leading-snug">Post construction, before commencing operations</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Board Scrutiny -->
+              <div class="border border-line bg-white p-4 shadow-xs">
+                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">02 &middot; Inspection Focus</span>
+                <h4 class="text-[15px] font-bold text-heading mt-0.5">What does the board judge?</h4>
+                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
+                  <div class="pr-2 border-r border-line">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
+                    <p class="text-slate-700 leading-snug">Site suitability, layout and proposed control design</p>
+                  </div>
+                  <div class="pl-1">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
+                    <p class="text-slate-700 leading-snug">Installed systems and physical lab test reports</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: Typical Timeline -->
+              <div class="border border-line bg-white p-4 shadow-xs">
+                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">03 &middot; Turnaround</span>
+                <h4 class="text-[15px] font-bold text-heading mt-0.5">Typical Approval Timeline</h4>
+                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
+                  <div class="pr-2 border-r border-line">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
+                    <p class="text-heading font-bold text-sm leading-snug">30 to 60 working days</p>
+                  </div>
+                  <div class="pl-1">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
+                    <p class="text-heading font-bold text-sm leading-snug">30 to 45 working days</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: Validity Period -->
+              <div class="border border-line bg-white p-4 shadow-xs">
+                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">04 &middot; Duration</span>
+                <h4 class="text-[15px] font-bold text-heading mt-0.5">Validity &amp; Expiry</h4>
+                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
+                  <div class="pr-2 border-r border-line">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
+                    <p class="text-slate-700 leading-snug">Until project completion or period fixed by board</p>
+                  </div>
+                  <div class="pl-1">
+                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
+                    <p class="text-slate-700 leading-snug">1 to 5 years by category, renewable</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p class="mt-4 text-xs text-slate-400">Timelines and statutory fees vary by specific state pollution board guidelines.</p>
           </div>
 
