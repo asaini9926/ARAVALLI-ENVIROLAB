@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aravalli Envirolab &amp; Consultancy Services | NABL-Grade Testing &amp; Statutory Approvals</title>
-  <meta name="description" content="Aravalli Envirolab &amp; Consultancy Services provides NABL-grade environmental testing (Water, Air, Stack, Soil, Noise) and turnkey statutory clearances (CTE, CTO, CGWA Ground Water NOC) across Jaipur, Kotputli-Behror, and Rajasthan.">
+  <title>Aravalli Envirolab &amp; Consultancy Services | NABL Testing &amp; Statutory Approvals</title>
+  <meta name="description" content="Aravalli Envirolab &amp; Consultancy Services: 20+ years of NABL-grade environmental testing (Water, Air, Stack, Soil, Noise) and turnkey statutory clearances (CTE, CTO, CGWA Ground Water NOC) across Jaipur, Kotputli-Behror, and Rajasthan.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
@@ -12,10 +12,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans for crisp corporate tech typography -->
+  <!-- Premium European Engineering Fonts: Outfit (Display/Headings) & Plus Jakarta Sans (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,8 +26,8 @@
           colors: {
             ecoNavy: {
               DEFAULT: '#00254C',
-              dark: '#001935',
-              deep: '#00142A',
+              dark: '#001833',
+              deep: '#001226',
               light: '#003366',
             },
             ecoBlue: {
@@ -40,17 +40,17 @@
               hover: '#00D625',
               faded: '#E8F9EB',
             },
-            slateInk: '#0F172A',
+            slateInk: '#0B1528',
             slateSub: '#475569',
             lightBg: '#F8FAFC',
             surfaceBorder: '#E2E8F0',
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'system-ui', 'sans-serif'],
           },
           maxWidth: {
-            site: '1280px',
+            site: '1320px',
           }
         }
       }
@@ -58,14 +58,21 @@
   </script>
 
   <style>
-    /* Global scroll smoothing and offsets */
+    /* Strict font enforcement so browser never falls back to generic fonts */
+    * {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .brand-title {
+      font-family: 'Outfit', sans-serif !important;
+      letter-spacing: -0.025em;
+    }
+
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 85px;
     }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      color: #0F172A;
+      color: #0B1528;
       background-color: #FFFFFF;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -83,49 +90,36 @@
 
     /* Glassmorphism & Micro-borders */
     .glass-nav {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
     }
     .glass-card {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(226, 232, 240, 0.8);
     }
     .glass-dark {
-      background: rgba(0, 37, 76, 0.85);
+      background: rgba(0, 37, 76, 0.82);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
     }
 
-    /* Subtle Animated Gradient Mesh for Hero */
-    .mesh-gradient {
-      background: radial-gradient(circle at 20% 20%, rgba(0, 121, 193, 0.18) 0%, transparent 40%),
-                  radial-gradient(circle at 80% 80%, rgba(0, 190, 33, 0.12) 0%, transparent 45%),
-                  radial-gradient(circle at 50% 50%, rgba(0, 37, 76, 0.95) 0%, #001935 100%);
+    /* Cinematic Hero Gradient with Visual Image Layer */
+    .hero-bg-layer {
+      background-image: linear-gradient(135deg, rgba(0, 24, 51, 0.94) 0%, rgba(0, 37, 76, 0.88) 55%, rgba(0, 74, 152, 0.75) 100%),
+                        url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    /* Mobile view rule requested by user: Remove bulky multi-column footer on mobile screens */
+    /* Mobile view rule: Remove bulky multi-column footer on mobile screens */
     @media (max-width: 768px) {
       .mobile-hide-footer {
         display: none !important;
       }
-    }
-
-    /* Interactive pill states */
-    .tab-btn.active {
-      background-color: #0079C1;
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(0, 121, 193, 0.35);
-    }
-    .tab-btn:not(.active) {
-      background-color: #FFFFFF;
-      color: #00254C;
-      border: 1px solid #E2E8F0;
-    }
-    .tab-btn:not(.active):hover {
-      background-color: #F1F5F9;
     }
 
     /* Clean badge tag styling */
@@ -143,7 +137,7 @@
 </head>
 <body class="selection:bg-ecoBlue selection:text-white">
 
-  <!-- TOP UTILITY BAR (Identical to eco2tech's Clean Top Utility Bar) -->
+  <!-- TOP UTILITY BAR (Clean, high-trust accreditations & contact) -->
   <header class="border-b border-slate-100 bg-slate-50/90 text-xs text-slateSub hidden md:block">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
       <div class="flex items-center gap-6">
@@ -173,44 +167,45 @@
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION (Clean corporate sticky nav with brand logo) -->
+  <!-- MAIN NAVIGATION (Engineered to NEVER overlap on any laptop, tablet or desktop screen) -->
   <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-200">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20 w-full gap-4">
         
         <!-- Brand Logo & Clean Corporate Typography -->
-        <a href="#hero" class="flex items-center gap-3.5 group">
-          <img src="logo.png" alt="Aravalli Envirolab Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='ChatGPT Image Sep 25, 2026, 06_39_51 PM.png'">
+        <a href="#hero" class="flex items-center gap-3.5 shrink-0 group">
+          <img src="logo.png" alt="Aravalli Envirolab Logo" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='ChatGPT Image Sep 25, 2026, 06_39_51 PM.png'">
           <div class="flex flex-col">
-            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-ecoNavy leading-none">
+            <span class="font-display font-extrabold text-base sm:text-lg lg:text-xl tracking-tight text-ecoNavy leading-none">
               ARAVALLI <span class="text-ecoBlue font-bold">ENVIROLAB</span>
             </span>
-            <span class="text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-slate-500 mt-1">
+            <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase text-slate-500 mt-1">
               Testing Lab &amp; Consultancy Services
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links (Clean, minimalist mega-style) -->
-        <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-          <a href="#applications" class="hover:text-ecoBlue transition-colors py-2">Applications &amp; Sectors</a>
-          <a href="#testing-lab" class="hover:text-ecoBlue transition-colors py-2">Laboratory Services</a>
-          <a href="#statutory-clearances" class="hover:text-ecoBlue transition-colors py-2">CTE &bull; CTO &bull; NOC</a>
-          <a href="#industrial-hubs" class="hover:text-ecoBlue transition-colors py-2">Industrial Hubs</a>
-          <a href="#technical-library" class="hover:text-ecoBlue transition-colors py-2">Technical Library</a>
-          <a href="#about-us" class="hover:text-ecoBlue transition-colors py-2">About</a>
+        <!-- Desktop Navigation Links (Clean, concise titles with whitespace-nowrap) -->
+        <div class="hidden xl:flex items-center gap-5 2xl:gap-7 text-sm font-semibold text-slate-700">
+          <a href="#applications" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Applications</a>
+          <a href="#testing-lab" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Testing Lab</a>
+          <a href="#statutory-clearances" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Clearances (CTE/CTO)</a>
+          <a href="#equipment-showcase" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Equipment</a>
+          <a href="#industrial-hubs" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Industrial Hubs</a>
+          <a href="#technical-library" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Library</a>
+          <a href="#about-us" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">About Us</a>
         </div>
 
-        <!-- Action CTA Button (eco2tech high-contrast button) -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-ecoBlue hover:bg-ecoBlue-hover shadow-sm hover:shadow-md transition-all duration-200">
-            Request Lab Quote
+        <!-- Action CTA Button (Positioned safely with shrink-0 so it NEVER overlaps) -->
+        <div class="hidden md:flex items-center gap-3 shrink-0">
+          <a href="#contact" class="inline-flex items-center justify-center px-4 lg:px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-ecoBlue hover:bg-ecoBlue-hover shadow-sm hover:shadow-md transition-all duration-200 whitespace-nowrap">
+            Request Quote
             <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
           </a>
         </div>
 
-        <!-- Mobile Menu Hamburger -->
-        <div class="flex items-center lg:hidden">
+        <!-- Mobile & Laptop Hamburger (Triggers below 1280px to guarantee zero text collision) -->
+        <div class="flex items-center xl:hidden">
           <button id="mobileMenuToggle" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-lg text-ecoNavy hover:bg-slate-100 focus:outline-none">
             <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -221,10 +216,11 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
+    <div id="mobileMenu" class="hidden xl:hidden border-b border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
       <a href="#applications" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Applications &amp; Sectors</a>
       <a href="#testing-lab" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Laboratory Testing (NABL)</a>
       <a href="#statutory-clearances" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Statutory Clearances (CTE/CTO/NOC)</a>
+      <a href="#equipment-showcase" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Analytical Instrumentation</a>
       <a href="#industrial-hubs" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Jaipur &amp; Kotputli Industrial Hubs</a>
       <a href="#technical-library" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Technical Library &amp; Guidelines</a>
       <a href="#about-us" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">About Aravalli Envirolab</a>
@@ -238,69 +234,103 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION (High-Impact, Minimalist, Visual & Inspired by eco2tech.com) -->
-  <section id="hero" class="relative overflow-hidden bg-ecoNavy mesh-gradient text-white py-20 lg:py-28">
-    <!-- Ambient geometric lines & glow overlay -->
-    <div class="absolute inset-0 pointer-events-none opacity-20">
-      <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-ecoBlue filter blur-3xl"></div>
-      <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-ecoGreen filter blur-3xl"></div>
-    </div>
-
+  <!-- CINEMATIC VISUAL HERO SECTION (Rich Background Imagery + Interactive Visual Showcase) -->
+  <section id="hero" class="relative overflow-hidden hero-bg-layer text-white py-16 sm:py-20 lg:py-24">
     <div class="relative max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Micro Trust Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-emerald-300 mb-6">
-          <span class="w-2 h-2 rounded-full bg-ecoGreen animate-ping"></span>
-          20+ Years Environmental Precision &bull; Geologist-Led Team
+        <!-- Left: Punchy Headlines & Actions -->
+        <div class="lg:col-span-7">
+          
+          <!-- Trust Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-emerald-300 mb-5">
+            <span class="w-2 h-2 rounded-full bg-ecoGreen animate-ping"></span>
+            20+ Years Environmental Precision &bull; Geologist-Led Team
+          </div>
+
+          <!-- Bold High-Impact Headline (Outfit Font) -->
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-5 text-white">
+            Precision Environmental Testing &amp; Statutory Approvals.
+          </h1>
+
+          <!-- 2-Sentence Value Proposition -->
+          <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed mb-8 max-w-xl">
+            NABL-grade laboratory analysis and end-to-end statutory clearances (CTE, CTO, CGWA Groundwater NOC) for manufacturing, mining, and infrastructure across Rajasthan.
+          </p>
+
+          <!-- Dual High-Contrast Buttons -->
+          <div class="flex flex-wrap items-center gap-4 mb-10">
+            <a href="#testing-lab" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-ecoGreen hover:bg-ecoGreen-hover shadow-lg shadow-emerald-950/40 transition-all duration-200">
+              Explore Laboratory Testing
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <a href="#statutory-clearances" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all duration-200">
+              Statutory Clearances (CTE/CTO)
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <!-- 4 Floating Live Metric Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-white/20">
+            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
+              <div class="text-2xl font-extrabold font-display text-white">20+</div>
+              <div class="text-xs text-slate-300 mt-0.5">Years Experience</div>
+            </div>
+            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
+              <div class="text-2xl font-extrabold font-display text-white">5,000+</div>
+              <div class="text-xs text-slate-300 mt-0.5">Samples Tested</div>
+            </div>
+            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
+              <div class="text-2xl font-extrabold font-display text-white">100%</div>
+              <div class="text-xs text-slate-300 mt-0.5">RSPCB Compliance</div>
+            </div>
+            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
+              <div class="text-2xl font-extrabold font-display text-white">2 Centers</div>
+              <div class="text-xs text-slate-300 mt-0.5">Jaipur &bull; Kotputli</div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Main Headline (Bold, punchy, minimal) -->
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6 text-white">
-          Certified Environmental Testing &amp; Statutory Clearances.
-        </h1>
+        <!-- Right: Visual Photographic Showcase Card (Eliminates the empty text feel!) -->
+        <div class="lg:col-span-5 hidden sm:block perspective-container">
+          <div class="tilt-card relative rounded-2xl overflow-hidden shadow-2xl border border-white/25 bg-white/10 backdrop-blur-xl p-4">
+            
+            <!-- High-Res Analytical Lab Photo -->
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=80" alt="Environmental Testing Chemist" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/90 via-transparent to-transparent"></div>
+              
+              <!-- Floating Live Instrumentation Badges -->
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300 px-2.5 py-1 rounded bg-ecoNavy/80 backdrop-blur-sm border border-white/10">
+                  NABL ISO/IEC 17025 Standards
+                </span>
+                <h3 class="text-base font-bold font-display text-white mt-1.5">
+                  State-of-the-Art Analytical Lab
+                </h3>
+                <p class="text-xs text-slate-300">
+                  Precision testing for water, stack emissions, soil &amp; ambient air.
+                </p>
+              </div>
+            </div>
 
-        <!-- 2-Sentence Value Proposition (Zero text walls) -->
-        <p class="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed mb-9 max-w-2xl">
-          NABL-grade laboratory analysis and end-to-end statutory approvals (CTE, CTO, CGWA Groundwater NOC) for industrial manufacturing, mining, and infrastructure across Rajasthan.
-        </p>
+            <!-- 2 Interactive Highlight Strips -->
+            <div class="mt-3.5 grid grid-cols-2 gap-2 text-xs">
+              <div class="rounded-lg bg-white/10 border border-white/15 p-2.5 text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-ecoGreen shrink-0"></span>
+                <span>Water &bull; BOD / COD / TDS</span>
+              </div>
+              <div class="rounded-lg bg-white/10 border border-white/15 p-2.5 text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 shrink-0"></span>
+                <span>Stack &bull; PM / SOx / NOx</span>
+              </div>
+            </div>
 
-        <!-- 2 Standout Action Buttons (Exact eco2tech dual-button hero layout) -->
-        <div class="flex flex-wrap items-center gap-4 mb-14">
-          <a href="#testing-lab" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-ecoGreen hover:bg-ecoGreen-hover shadow-lg shadow-emerald-900/30 transition-all duration-200">
-            Explore Laboratory Testing
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </a>
-          <a href="#statutory-clearances" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all duration-200">
-            Statutory Clearances (CTE/CTO)
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          </a>
+          </div>
         </div>
 
-      </div>
-
-      <!-- 4 Floating Live Metric Cards (Minimalist, High Visual Trust) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-8 border-t border-white/15">
-        <div class="glass-dark rounded-xl p-4 sm:p-5">
-          <div class="text-2xl sm:text-3xl font-extrabold font-display text-white mb-1">20+</div>
-          <div class="text-xs sm:text-sm font-medium text-slate-300">Years Industry Experience</div>
-          <div class="text-[11px] text-emerald-400 mt-1">Est. 2004 in Rajasthan</div>
-        </div>
-        <div class="glass-dark rounded-xl p-4 sm:p-5">
-          <div class="text-2xl sm:text-3xl font-extrabold font-display text-white mb-1">5,000+</div>
-          <div class="text-xs sm:text-sm font-medium text-slate-300">Samples Analyzed</div>
-          <div class="text-[11px] text-sky-400 mt-1">Water &bull; Air &bull; Stack &bull; Soil</div>
-        </div>
-        <div class="glass-dark rounded-xl p-4 sm:p-5">
-          <div class="text-2xl sm:text-3xl font-extrabold font-display text-white mb-1">100%</div>
-          <div class="text-xs sm:text-sm font-medium text-slate-300">Statutory Compliance</div>
-          <div class="text-[11px] text-emerald-400 mt-1">RSPCB &bull; CGWA &bull; MoEF&amp;CC</div>
-        </div>
-        <div class="glass-dark rounded-xl p-4 sm:p-5">
-          <div class="text-2xl sm:text-3xl font-extrabold font-display text-white mb-1">2 Centers</div>
-          <div class="text-xs sm:text-sm font-medium text-slate-300">Direct Field Operations</div>
-          <div class="text-[11px] text-sky-400 mt-1">Jaipur &amp; Kotputli-Behror</div>
-        </div>
       </div>
 
     </div>
@@ -333,7 +363,7 @@
     </div>
   </section>
 
-  <!-- TWO CORE PILLARS: INTERACTIVE SPLIT SHOWCASE (Laboratory vs. Consultancy) -->
+  <!-- TWO CORE OPERATIONAL WINGS WITH RICH REAL PHOTOGRAPHY -->
   <section class="py-16 bg-slate-50 border-b border-slate-200">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -342,85 +372,83 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
           Two Unified Disciplines Under One Roof
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3">
-          We bridge the gap between accredited laboratory scientific testing and seamless government statutory compliance.
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          We combine accredited scientific laboratory testing with complete government statutory compliance.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 perspective-container">
         
-        <!-- Pillar A: NABL Testing Lab -->
-        <div class="tilt-card bg-white rounded-2xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
-          <div class="w-2 h-full bg-ecoBlue absolute top-0 left-0"></div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-sky-50 text-ecoBlue flex items-center justify-center">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        <!-- Pillar A: Testing Laboratory (with large real image!) -->
+        <div class="tilt-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="relative h-56 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=800&q=80" alt="Environmental Testing Lab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 text-xs font-bold text-white bg-ecoBlue px-3 py-1 rounded-md shadow-sm">
+              NABL Accredited Wing
+            </span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-xl font-bold font-display">Testing Laboratory Services</h3>
+              <p class="text-xs text-slate-200">ISO/IEC 17025 standard parameters</p>
             </div>
-            <span class="param-tag bg-sky-50 text-ecoBlue">ISO/IEC 17025 Standard</span>
           </div>
 
-          <h3 class="text-2xl font-bold font-display text-ecoNavy mb-3">
-            Accredited Testing Laboratory
-          </h3>
-          <p class="text-slate-600 text-sm mb-6">
-            Equipped with calibrated analytical instrumentation for statutory water, ambient air, industrial stack emissions, and hazardous soil matrices.
-          </p>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Water &amp; Effluent:</strong> BOD, COD, TDS, TSS, Heavy Metals</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Air &amp; DG Stack:</strong> PM10, PM2.5, SO2, NOx, CO, Flue Gas</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Noise &amp; Soil:</strong> Type-1 SLM day/night dB(A), DG acoustic audits</span>
+              </li>
+            </ul>
 
-          <ul class="space-y-3 mb-8 text-sm text-slate-700">
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoGreen shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Effluent &amp; Wastewater:</strong> BOD, COD, TDS, TSS, Oil &amp; Grease, Heavy Metals</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoGreen shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Air &amp; DG Stack:</strong> PM10, PM2.5, SO2, NOx, CO, Stack Gas Velocity</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoGreen shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Acoustic &amp; Noise:</strong> Day/Night decibel mapping, DG Set acoustic audits</span>
-            </li>
-          </ul>
-
-          <a href="#testing-lab" class="inline-flex items-center text-sm font-bold text-ecoBlue hover:text-ecoBlue-hover group-hover:translate-x-1 transition-all">
-            View Complete Testing Parameters &rarr;
-          </a>
+            <a href="#testing-lab" class="inline-flex items-center text-sm font-bold text-ecoBlue hover:text-ecoBlue-hover group-hover:translate-x-1 transition-all">
+              View Complete Parameter Matrix &rarr;
+            </a>
+          </div>
         </div>
 
-        <!-- Pillar B: Statutory Clearances -->
-        <div class="tilt-card bg-white rounded-2xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
-          <div class="w-2 h-full bg-ecoGreen absolute top-0 left-0"></div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-ecoGreen flex items-center justify-center">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <!-- Pillar B: Statutory Consultancy (with large real image!) -->
+        <div class="tilt-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="relative h-56 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80" alt="Industrial Clearances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 text-xs font-bold text-white bg-ecoGreen px-3 py-1 rounded-md shadow-sm">
+              Turnkey Approvals
+            </span>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-xl font-bold font-display">Statutory Clearances (CTE / CTO)</h3>
+              <p class="text-xs text-slate-200">RSPCB, CGWA, and SEIAA liaison</p>
             </div>
-            <span class="param-tag bg-emerald-50 text-ecoGreen">Turnkey Approvals</span>
           </div>
 
-          <h3 class="text-2xl font-bold font-display text-ecoNavy mb-3">
-            Statutory Environmental Consultancy
-          </h3>
-          <p class="text-slate-600 text-sm mb-6">
-            Direct government liaison with RSPCB, CGWA, and SEIAA for new industrial project sanctions, annual renewals, and statutory legal defense.
-          </p>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Pollution Board NOCs:</strong> Consent to Establish (CTE) &amp; Consent to Operate (CTO)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Ground Water NOC:</strong> CGWA NOC, Piezometer installation, Hydrogeology</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span><strong>Annual Audits:</strong> Form-V Environmental Statements &amp; Haz-Waste Rules</span>
+              </li>
+            </ul>
 
-          <ul class="space-y-3 mb-8 text-sm text-slate-700">
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoBlue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Pollution NOCs:</strong> Consent to Establish (CTE) &amp; Consent to Operate (CTO)</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoBlue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Ground Water NOC:</strong> CGWA NOC, Piezometer installation, Hydrogeology</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-ecoBlue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              <span><strong>Environmental Audits:</strong> Form-V Environmental Statements &amp; Haz-Waste Rules</span>
-            </li>
-          </ul>
-
-          <a href="#statutory-clearances" class="inline-flex items-center text-sm font-bold text-ecoGreen hover:text-ecoGreen-hover group-hover:translate-x-1 transition-all">
-            Explore Statutory Approvals &rarr;
-          </a>
+            <a href="#statutory-clearances" class="inline-flex items-center text-sm font-bold text-ecoGreen hover:text-ecoGreen-hover group-hover:translate-x-1 transition-all">
+              Explore Clearances &amp; Approvals &rarr;
+            </a>
+          </div>
         </div>
 
       </div>
@@ -428,7 +456,7 @@
     </div>
   </section>
 
-  <!-- APPLICATIONS & INDUSTRIAL SECTORS (Visual Cards with Hover Effects like eco2tech) -->
+  <!-- APPLICATIONS & SECTORS (Visual Cards with Rich Photos like eco2tech) -->
   <section id="applications" class="py-20 bg-white">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -444,20 +472,20 @@
         </div>
         <div class="mt-4 md:mt-0">
           <a href="#contact" class="inline-flex items-center text-sm font-bold text-ecoBlue hover:text-ecoNavy">
-            Request Sector-Specific Scope
+            Request Sector Scope
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </a>
         </div>
       </div>
 
-      <!-- 6 Clean Visual Application Cards -->
+      <!-- 6 High-Impact Visual Cards with Real Photography -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- App 1: Industrial Effluent & ETP/STP -->
+        <!-- App 1: Effluent & Wastewater -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=700&q=75" alt="Effluent Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+          <div class="relative h-52 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=700&q=75" alt="Industrial Effluent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoBlue/90 px-2.5 py-1 rounded-md">
               Effluent &amp; Sewage
             </span>
@@ -483,11 +511,11 @@
           </div>
         </div>
 
-        <!-- App 2: Stack Emission & Boiler Exhaust -->
+        <!-- App 2: Stack Emission -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
+          <div class="relative h-52 overflow-hidden bg-slate-100">
             <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=700&q=75" alt="Stack Emissions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoNavy/90 px-2.5 py-1 rounded-md">
               Stack &amp; Air
             </span>
@@ -513,11 +541,11 @@
           </div>
         </div>
 
-        <!-- App 3: CGWA Groundwater NOC & Hydrogeology -->
+        <!-- App 3: CGWA Groundwater NOC -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
+          <div class="relative h-52 overflow-hidden bg-slate-100">
             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=700&q=75" alt="Groundwater Survey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoGreen/90 px-2.5 py-1 rounded-md">
               Ground Water NOC
             </span>
@@ -543,11 +571,11 @@
           </div>
         </div>
 
-        <!-- App 4: Ambient Air Quality Monitoring (AAQM) -->
+        <!-- App 4: Ambient Air Quality -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
+          <div class="relative h-52 overflow-hidden bg-slate-100">
             <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=75" alt="Ambient Air Monitoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoNavy/90 px-2.5 py-1 rounded-md">
               Ambient Air
             </span>
@@ -573,11 +601,11 @@
           </div>
         </div>
 
-        <!-- App 5: CTE & CTO Clearances (RSPCB) -->
+        <!-- App 5: CTE & CTO Clearances -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
+          <div class="relative h-52 overflow-hidden bg-slate-100">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=75" alt="Statutory Clearances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoBlue/90 px-2.5 py-1 rounded-md">
               RSPCB Liaison
             </span>
@@ -603,11 +631,11 @@
           </div>
         </div>
 
-        <!-- App 6: Noise & Factory Lux Audits -->
+        <!-- App 6: Workplace Noise & Lux -->
         <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=700&q=75" alt="Industrial Noise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/80 via-transparent to-transparent"></div>
+          <div class="relative h-52 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75" alt="Industrial Noise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoGreen/90 px-2.5 py-1 rounded-md">
               Workplace Safety
             </span>
@@ -638,166 +666,88 @@
     </div>
   </section>
 
-  <!-- LABORATORY TESTING SERVICES MATRIX (Zero text-walls, clean parameter pills) -->
-  <section id="testing-lab" class="py-20 bg-slate-50 border-y border-slate-200">
+  <!-- EQUIPMENT & INSTRUMENTATION VISUAL SHOWCASE (Modeled after eco2tech's Speece Cone Components) -->
+  <section id="equipment-showcase" class="py-20 bg-slate-900 text-white">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold tracking-widest uppercase text-ecoBlue">Testing Capabilities</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-          NABL ISO/IEC 17025 Compliant Parameters
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold tracking-widest uppercase text-emerald-400">Precision Infrastructure</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2">
+          Calibrated Analytical Equipment
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Legally defensible analytical testing reports recognized by RSPCB, CPCB, and MoEF&amp;CC authorities.
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          NABL ISO/IEC 17025 compliant instrumentation ensuring legally defensible data for courts and regulatory authorities.
         </p>
       </div>
 
-      <!-- Parameter Matrix Tabs / Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Box 1: Water & Wastewater -->
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:border-ecoBlue transition-all">
-          <div class="w-10 h-10 rounded-lg bg-sky-50 text-ecoBlue flex items-center justify-center mb-4">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        <!-- Equipment 1 -->
+        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
+          <div class="relative h-44 overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=600&q=80" alt="Spectrophotometer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoNavy/90 px-2 py-0.5 rounded">Analytical</span>
           </div>
-          <h3 class="text-lg font-bold font-display text-ecoNavy mb-2">Water &amp; Effluent</h3>
-          <p class="text-xs text-slate-500 mb-4">Potable, borewell, process water, ETP/STP treated discharge.</p>
-          <div class="space-y-1.5 text-xs text-slate-700">
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>pH, Turbidity, Color</span><span class="font-semibold text-slate-900">Standard</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>BOD (3-Day 27&deg;C)</span><span class="font-semibold text-slate-900">IS 3025</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>COD (Open Reflux)</span><span class="font-semibold text-slate-900">IS 3025</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>TDS, TSS, Hardness</span><span class="font-semibold text-slate-900">Gravimetric</span></div>
-            <div class="flex justify-between py-1"><span>Heavy Metals (Pb, Cr, Cd)</span><span class="font-semibold text-slate-900">AAS / ICP</span></div>
-          </div>
-        </div>
-
-        <!-- Box 2: Ambient Air Quality -->
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:border-ecoBlue transition-all">
-          <div class="w-10 h-10 rounded-lg bg-emerald-50 text-ecoGreen flex items-center justify-center mb-4">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold font-display text-ecoNavy mb-2">Ambient Air (AAQ)</h3>
-          <p class="text-xs text-slate-500 mb-4">National Ambient Air Quality Standards (NAAQS) compliance.</p>
-          <div class="space-y-1.5 text-xs text-slate-700">
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Particulate Matter (PM10)</span><span class="font-semibold text-slate-900">Gravimetric</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Fine Dust (PM2.5)</span><span class="font-semibold text-slate-900">EPA / IS</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Sulphur Dioxide (SO2)</span><span class="font-semibold text-slate-900">West-Gaeke</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Nitrogen Dioxide (NO2)</span><span class="font-semibold text-slate-900">Jacob-Hoc.</span></div>
-            <div class="flex justify-between py-1"><span>Carbon Monoxide (CO)</span><span class="font-semibold text-slate-900">NDIR Sensor</span></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold font-display text-base text-white mb-1">Double Beam Spectrophotometer</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                UV-Vis analysis for trace heavy metals, COD, sulfates, fluorides, and cyanides in trade effluents.
+              </p>
+            </div>
+            <div class="text-[11px] font-semibold text-emerald-400">NABL Calibrated &check;</div>
           </div>
         </div>
 
-        <!-- Box 3: Stack Emission -->
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:border-ecoBlue transition-all">
-          <div class="w-10 h-10 rounded-lg bg-sky-50 text-ecoNavy flex items-center justify-center mb-4">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <!-- Equipment 2 -->
+        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
+          <div class="relative h-44 overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80" alt="Stack Sampler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoBlue px-2 py-0.5 rounded">Emissions</span>
           </div>
-          <h3 class="text-lg font-bold font-display text-ecoNavy mb-2">DG Stack &amp; Boiler</h3>
-          <p class="text-xs text-slate-500 mb-4">Flue gas velocity, particulate matter, and combustion gases.</p>
-          <div class="space-y-1.5 text-xs text-slate-700">
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Total Suspended PM</span><span class="font-semibold text-slate-900">Isokinetic</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Flue Gas Velocity (m/s)</span><span class="font-semibold text-slate-900">Pitot Tube</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Gas Temperature (&deg;C)</span><span class="font-semibold text-slate-900">Thermocouple</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Oxides of Nitrogen (NOx)</span><span class="font-semibold text-slate-900">IS 11255</span></div>
-            <div class="flex justify-between py-1"><span>Carbon Dioxide (CO2)</span><span class="font-semibold text-slate-900">Orsat Tech</span></div>
-          </div>
-        </div>
-
-        <!-- Box 4: Soil, Noise & Solid Waste -->
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:border-ecoBlue transition-all">
-          <div class="w-10 h-10 rounded-lg bg-emerald-50 text-ecoGreen flex items-center justify-center mb-4">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold font-display text-ecoNavy mb-2">Noise, Soil &amp; Sludge</h3>
-          <p class="text-xs text-slate-500 mb-4">Occupational safety, hazardous waste TCLP, and soil fertility.</p>
-          <div class="space-y-1.5 text-xs text-slate-700">
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Ambient Noise Leq dB(A)</span><span class="font-semibold text-slate-900">Type-1 SLM</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>DG Insertion Loss (dB)</span><span class="font-semibold text-slate-900">CPCB Norms</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Soil Organic Carbon / NPK</span><span class="font-semibold text-slate-900">Titrimetric</span></div>
-            <div class="flex justify-between py-1 border-b border-slate-100"><span>Heavy Metals in Sludge</span><span class="font-semibold text-slate-900">Acid Digest</span></div>
-            <div class="flex justify-between py-1"><span>Illumination / Lux Survey</span><span class="font-semibold text-slate-900">Factory Act</span></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold font-display text-base text-white mb-1">Isokinetic Stack Monitoring Kit</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Calibrated Pitot tubes, digital manometer, and heated thimble for boiler &amp; DG flue particulate.
+              </p>
+            </div>
+            <div class="text-[11px] font-semibold text-sky-400">IS 11255 Compliant &check;</div>
           </div>
         </div>
 
-      </div>
-
-      <!-- Action callout -->
-      <div class="mt-10 p-6 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <h4 class="font-bold text-ecoNavy text-base">Need customized sample collection at your plant?</h4>
-          <p class="text-xs text-slate-500 mt-0.5">Our mobile field sampling team reaches Sitapura, VKIA, Neemrana, and Kotputli within 24 hours.</p>
-        </div>
-        <a href="#contact" class="shrink-0 px-6 py-2.5 rounded-lg text-sm font-bold text-white bg-ecoBlue hover:bg-ecoBlue-hover transition-colors">
-          Book Field Sampler
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 4-STEP FAST STATUTORY COMPLIANCE FLOW (Interactive 3D / Horizontal Engineering Process) -->
-  <section id="statutory-clearances" class="py-20 bg-white">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold tracking-widest uppercase text-ecoGreen">Turnkey Regulatory Engineering</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-          From Audit to Sanction in 4 Clear Steps
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Our senior environmental geologists eliminate paperwork rejections with 100% compliant filings.
-        </p>
-      </div>
-
-      <!-- 4 Horizontal Steps with connection line -->
-      <div class="relative grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Step 1 -->
-        <div class="relative p-6 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:shadow-lg transition-all duration-300">
-          <div class="w-10 h-10 rounded-full bg-ecoNavy text-white font-extrabold font-display flex items-center justify-center text-sm mb-4">
-            01
+        <!-- Equipment 3 -->
+        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
+          <div class="relative h-44 overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Air Sampler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoGreen px-2 py-0.5 rounded">Air Quality</span>
           </div>
-          <h3 class="text-base font-bold text-ecoNavy mb-2">Site Inspection &amp; Audit</h3>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            On-site evaluation of manufacturing capacity, water balance, stack dimensions, and hazardous waste storage.
-          </p>
-          <div class="mt-4 text-[11px] font-semibold text-ecoBlue">Within 24 Hours &rarr;</div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold font-display text-base text-white mb-1">High-Volume Ambient Air Sampler</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                PM10 &amp; PM2.5 dual-channel dust samplers with thermoelectrically cooled gas impingers for SO2 &amp; NOx.
+              </p>
+            </div>
+            <div class="text-[11px] font-semibold text-emerald-400">NAAQS Standards &check;</div>
+          </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="relative p-6 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:shadow-lg transition-all duration-300">
-          <div class="w-10 h-10 rounded-full bg-ecoBlue text-white font-extrabold font-display flex items-center justify-center text-sm mb-4">
-            02
+        <!-- Equipment 4 -->
+        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
+          <div class="relative h-44 overflow-hidden bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Field Metrology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded">Groundwater</span>
           </div>
-          <h3 class="text-base font-bold text-ecoNavy mb-2">NABL Laboratory Testing</h3>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Mandatory environmental monitoring for stack emissions, baseline air, effluent, and groundwater quality.
-          </p>
-          <div class="mt-4 text-[11px] font-semibold text-ecoBlue">Fast Lab Turnaround &rarr;</div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="relative p-6 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:shadow-lg transition-all duration-300">
-          <div class="w-10 h-10 rounded-full bg-ecoGreen text-white font-extrabold font-display flex items-center justify-center text-sm mb-4">
-            03
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold font-display text-base text-white mb-1">Digital Piezometer &amp; SLM Meter</h4>
+              <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                Type-1 sound level meters with octave filter sets &amp; hydrostatic groundwater telemetry pressure transducers.
+              </p>
+            </div>
+            <div class="text-[11px] font-semibold text-indigo-400">CGWA Telemetry Ready &check;</div>
           </div>
-          <h3 class="text-base font-bold text-ecoNavy mb-2">Legal Dossier &amp; Filing</h3>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Drafting project reports, ETP adequacy designs, water balance diagrams, and submission on RSPCB / CGWA portals.
-          </p>
-          <div class="mt-4 text-[11px] font-semibold text-ecoGreen">Zero Query Guarantee &rarr;</div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="relative p-6 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:shadow-lg transition-all duration-300">
-          <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-extrabold font-display flex items-center justify-center text-sm mb-4">
-            04
-          </div>
-          <h3 class="text-base font-bold text-ecoNavy mb-2">NOC &amp; Consent Sanction</h3>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Securing official Consent to Establish (CTE), Consent to Operate (CTO), or CGWA Groundwater NOC letter.
-          </p>
-          <div class="mt-4 text-[11px] font-semibold text-emerald-600">Statutory Certificate Issued &check;</div>
         </div>
 
       </div>
@@ -805,7 +755,7 @@
     </div>
   </section>
 
-  <!-- INDUSTRIAL HUBS: JAIPUR & KOTPUTLI-BEHROR COVERAGE (Crucial User Requirement) -->
+  <!-- INDUSTRIAL HUBS: JAIPUR & KOTPUTLI-BEHROR WITH VISUAL PHOTOGRAPHY -->
   <section id="industrial-hubs" class="py-20 bg-slate-50 border-y border-slate-200">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -821,55 +771,71 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Jaipur Hub Card -->
-        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold font-display text-ecoNavy flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-ecoBlue"></span>
-              Jaipur Industrial District
-            </h3>
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-sky-50 text-ecoBlue">Same-Day Field Pickup</span>
+        <!-- Jaipur Hub Card (with real visual photography!) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
+          <div class="relative h-44 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75" alt="Jaipur Industrial Hub" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
+              <h3 class="text-xl font-bold font-display flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-ecoBlue"></span>
+                Jaipur Industrial District
+              </h3>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-sky-500/90">Same-Day Sampling</span>
+            </div>
           </div>
-          <p class="text-xs text-slate-500 mb-6">
-            Supporting over 350+ manufacturing, textile, handicraft, engineering, and institutional units in Jaipur:
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Sitapura Industrial Area</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Vishwakarma (VKIA)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Bagru RIICO Phase I &amp; II</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Mansarovar Industrial Zone</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Bindayaka &amp; Jhotwara</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Bassi &amp; Kanakpura</span>
-          </div>
-          <div class="text-xs text-slate-500 flex items-center gap-2">
-            <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-            Jaipur Central Lab &amp; Liaison Office
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-slate-500 mb-4">
+                Supporting over 350+ manufacturing, textile, engineering, and institutional units in Jaipur:
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Sitapura Industrial Area</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Vishwakarma (VKIA)</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bagru RIICO Phase I &amp; II</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Mansarovar Industrial Zone</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bindayaka &amp; Jhotwara</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bassi &amp; Kanakpura</span>
+              </div>
+            </div>
+            <div class="text-xs text-slate-500 flex items-center gap-2 pt-3 border-t border-slate-100">
+              <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+              Jaipur Central Lab &amp; Liaison Office
+            </div>
           </div>
         </div>
 
-        <!-- Kotputli-Behror & NCR Hub Card -->
-        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold font-display text-ecoNavy flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-ecoGreen"></span>
-              Kotputli-Behror &amp; NCR Corridor
-            </h3>
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-ecoGreen">Heavy Industry Hub</span>
+        <!-- Kotputli-Behror Hub Card (with real visual photography!) -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
+          <div class="relative h-44 overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=75" alt="Kotputli Behror Belt" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
+              <h3 class="text-xl font-bold font-display flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-ecoGreen"></span>
+                Kotputli-Behror &amp; NCR Belt
+              </h3>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/90">Heavy Industry Hub</span>
+            </div>
           </div>
-          <p class="text-xs text-slate-500 mb-6">
-            Comprehensive stack monitoring, groundwater surveys, and CTE/CTO sanctions for major industrial belts:
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Kotputli RIICO</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Behror Industrial Area</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Neemrana Japanese Zone</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Ghiloth Industrial Park</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Shahjahanpur &amp; Sotanala</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold">Bhiwadi &amp; Khushkhera Corridor</span>
-          </div>
-          <div class="text-xs text-slate-500 flex items-center gap-2">
-            <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-            Kotputli-Behror Field Operations Team
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-slate-500 mb-4">
+                Comprehensive stack monitoring, groundwater surveys, and CTE/CTO sanctions for major industrial belts:
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Kotputli RIICO</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Behror Industrial Area</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Neemrana Japanese Zone</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Ghiloth Industrial Park</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Shahjahanpur &amp; Sotanala</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bhiwadi &amp; Khushkhera Corridor</span>
+              </div>
+            </div>
+            <div class="text-xs text-slate-500 flex items-center gap-2 pt-3 border-t border-slate-100">
+              <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+              Kotputli-Behror Field Operations Team
+            </div>
           </div>
         </div>
 
@@ -902,7 +868,7 @@
             <div class="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold text-xs mb-4">
               PDF
             </div>
-            <h4 class="font-bold text-sm text-ecoNavy mb-1">RSPCB CTE/CTO Checklist</h4>
+            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">RSPCB CTE/CTO Checklist</h4>
             <p class="text-xs text-slate-500 mb-4">Mandatory papers, land documents, and project report templates.</p>
           </div>
           <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
@@ -916,7 +882,7 @@
             <div class="w-10 h-10 rounded-lg bg-sky-50 text-ecoBlue flex items-center justify-center font-bold text-xs mb-4">
               PDF
             </div>
-            <h4 class="font-bold text-sm text-ecoNavy mb-1">CGWA Groundwater Rules</h4>
+            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">CGWA Groundwater Rules</h4>
             <p class="text-xs text-slate-500 mb-4">Telemetry water meter specifications and piezometer depth norms.</p>
           </div>
           <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
@@ -930,7 +896,7 @@
             <div class="w-10 h-10 rounded-lg bg-emerald-50 text-ecoGreen flex items-center justify-center font-bold text-xs mb-4">
               PDF
             </div>
-            <h4 class="font-bold text-sm text-ecoNavy mb-1">Effluent Discharge Limits</h4>
+            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">Effluent Discharge Limits</h4>
             <p class="text-xs text-slate-500 mb-4">Standard CPCB/RSPCB limits for inland surface, sewer, and irrigation.</p>
           </div>
           <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
@@ -944,7 +910,7 @@
             <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs mb-4">
               PDF
             </div>
-            <h4 class="font-bold text-sm text-ecoNavy mb-1">Boiler Stack Emission Norms</h4>
+            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">Boiler Stack Emission Norms</h4>
             <p class="text-xs text-slate-500 mb-4">Fuel-based stack height formulas and permissible particulate levels.</p>
           </div>
           <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
@@ -957,7 +923,7 @@
     </div>
   </section>
 
-  <!-- ABOUT US / LEADERSHIP SECTION -->
+  <!-- ABOUT US / LEADERSHIP SECTION (with 2-Image Mosaic Grid) -->
   <section id="about-us" class="py-20 bg-slate-50 border-t border-slate-200">
     <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -988,14 +954,12 @@
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[4/3] bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1000&q=75" alt="Aravalli Lab Instrumentation" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/60 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <span class="text-xs font-bold uppercase tracking-wider text-emerald-300">Analytical Division</span>
-              <h4 class="text-lg font-bold font-display mt-1">Precision Instrumentation &amp; Quality Control</h4>
-            </div>
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=800&q=75" alt="Analytical Lab Chemist" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-slate-200 mt-6">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=75" alt="Field Survey Team" class="w-full h-full object-cover">
           </div>
         </div>
 
@@ -1133,7 +1097,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (Designed per user requirement: Minimalist, clean, with mobile-hide rule to avoid mobile clutter) -->
+  <!-- FOOTER (Clean desktop footer with user-requested complete mobile removal) -->
   <footer class="bg-slate-900 text-slate-400 text-xs">
     
     <!-- Desktop-Only Detailed Footer Links (Hidden on mobile per user instruction) -->
@@ -1154,7 +1118,7 @@
 
           <!-- Col 2 -->
           <div>
-            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Testing Services</h4>
+            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Testing Services</h4>
             <ul class="space-y-2 text-xs">
               <li><a href="#testing-lab" class="hover:text-white transition-colors">Effluent &amp; Wastewater Testing</a></li>
               <li><a href="#testing-lab" class="hover:text-white transition-colors">Stack Emission Monitoring</a></li>
@@ -1166,7 +1130,7 @@
 
           <!-- Col 3 -->
           <div>
-            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Statutory Clearances</h4>
+            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Statutory Clearances</h4>
             <ul class="space-y-2 text-xs">
               <li><a href="#statutory-clearances" class="hover:text-white transition-colors">RSPCB Consent to Establish (CTE)</a></li>
               <li><a href="#statutory-clearances" class="hover:text-white transition-colors">RSPCB Consent to Operate (CTO)</a></li>
@@ -1178,7 +1142,7 @@
 
           <!-- Col 4 -->
           <div>
-            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Regional Coverage</h4>
+            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Regional Coverage</h4>
             <ul class="space-y-2 text-xs">
               <li><span>Sitapura &amp; VKIA, Jaipur</span></li>
               <li><span>Bagru RIICO Industrial Area</span></li>
@@ -1192,7 +1156,7 @@
       </div>
     </div>
 
-    <!-- Minimalist Bottom Bar (Visible on both desktop and mobile) -->
+    <!-- Minimalist Bottom Bar (Clean on both desktop and mobile) -->
     <div class="py-6">
       <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <p class="text-slate-400 text-xs">
@@ -1208,9 +1172,9 @@
 
   </footer>
 
-  <!-- LIGHTWEIGHT INTERACTIVE JAVASCRIPT -->
+  <!-- LIGHTWEIGHT JAVASCRIPT -->
   <script>
-    // Mobile Menu Toggle
+    // Mobile & Laptop Menu Toggle
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const hamburgerIcon = document.getElementById('hamburgerIcon');
