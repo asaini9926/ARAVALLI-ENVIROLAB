@@ -1014,70 +1014,106 @@
               </table>
             </div>
 
-            <!-- Mobile Responsive Comparison (Zero horizontal scroll, generous 50/50 side-by-side reading) -->
-            <div class="md:hidden space-y-3">
-              <!-- Item 1: When Required -->
-              <div class="border border-line bg-white p-4 shadow-xs">
-                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">01 &middot; Timing</span>
-                <h4 class="text-[15px] font-bold text-heading mt-0.5">When is it required?</h4>
-                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
-                  <div class="pr-2 border-r border-line">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
-                    <p class="text-slate-700 leading-snug">Prior to any site construction or plant expansion</p>
+            <!-- Mobile 3-Section Horizontal Scroll (Touch-Swipeable, 3 Dedicated Cards) -->
+            <div class="md:hidden">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 px-1">
+                <span>Swipe to compare</span>
+                <span class="font-semibold text-secondary-600">3 Sections &rarr;</span>
+              </div>
+              <div id="cteScroll" class="flex overflow-x-auto snap-x snap-mandatory gap-3.5 pb-3 no-scrollbar -mx-4 px-4">
+                <!-- Section 1: Consent to Establish (CTE) -->
+                <div class="snap-center shrink-0 w-[84vw] max-w-[340px] border border-line bg-white p-5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-bold tracking-[1.5px] uppercase text-secondary-600">01 &middot; Pre-Construction</span>
+                    <span class="px-2 py-0.5 bg-amber-50 text-secondary-700 text-[10px] font-bold uppercase border border-amber-200">Stage 1</span>
                   </div>
-                  <div class="pl-1">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
-                    <p class="text-slate-700 leading-snug">Post construction, before commencing operations</p>
+                  <h4 class="text-xl font-bold text-heading mt-2">Consent to Establish (CTE)</h4>
+                  <p class="text-xs text-slate-500 mt-1">Mandatory Pollution NOC prior to breaking ground or plant expansion.</p>
+
+                  <div class="mt-4 pt-4 border-t border-line space-y-3 text-[13px]">
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">When Required</span>
+                      <p class="text-slate-800 font-medium mt-0.5">Prior to any site construction, machine installation or plant expansion.</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Board Scrutiny</span>
+                      <p class="text-slate-800 font-medium mt-0.5">Site suitability, layout, zoning &amp; proposed pollution control designs (ETP/APCM).</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Approval Timeline</span>
+                      <p class="text-heading font-bold text-sm mt-0.5">30 to 60 working days</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Validity Period</span>
+                      <p class="text-slate-800 font-medium mt-0.5">Until project completion or duration set by the board.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section 2: Consent to Operate (CTO) -->
+                <div class="snap-center shrink-0 w-[84vw] max-w-[340px] border border-line bg-white p-5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-bold tracking-[1.5px] uppercase text-primary">02 &middot; Pre-Commissioning</span>
+                    <span class="px-2 py-0.5 bg-blue-50 text-primary text-[10px] font-bold uppercase border border-blue-200">Stage 2</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-heading mt-2">Consent to Operate (CTO)</h4>
+                  <p class="text-xs text-slate-500 mt-1">Mandatory operating license before commissioning production.</p>
+
+                  <div class="mt-4 pt-4 border-t border-line space-y-3 text-[13px]">
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">When Required</span>
+                      <p class="text-slate-800 font-medium mt-0.5">Post construction completion, before starting commercial production.</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Board Scrutiny</span>
+                      <p class="text-slate-800 font-medium mt-0.5">Installed pollution equipment &amp; physical lab test reports of emissions/effluents.</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Approval Timeline</span>
+                      <p class="text-heading font-bold text-sm mt-0.5">30 to 45 working days</p>
+                    </div>
+                    <div>
+                      <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Validity Period</span>
+                      <p class="text-slate-800 font-medium mt-0.5">1 to 5 years depending on pollution category (Renewable).</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section 3: Head-to-Head Comparison Matrix -->
+                <div class="snap-center shrink-0 w-[84vw] max-w-[340px] border border-line bg-white p-5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-bold tracking-[1.5px] uppercase text-slate-600">03 &middot; Comparison</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[10px] font-bold uppercase border border-slate-200">Summary</span>
+                  </div>
+                  <h4 class="text-xl font-bold text-heading mt-2">Key Differences Matrix</h4>
+                  <p class="text-xs text-slate-500 mt-1">Side-by-side comparison across statutory metrics.</p>
+
+                  <div class="mt-4 pt-4 border-t border-line divide-y divide-line text-[12.5px]">
+                    <div class="py-2.5 flex justify-between items-baseline gap-2">
+                      <span class="text-slate-500 font-medium">Approval Timeline</span>
+                      <span class="text-right font-bold text-heading">30-60d <span class="text-slate-400 font-normal">vs</span> 30-45d</span>
+                    </div>
+                    <div class="py-2.5 flex justify-between items-baseline gap-2">
+                      <span class="text-slate-500 font-medium">Primary Focus</span>
+                      <span class="text-right font-bold text-heading">Design <span class="text-slate-400 font-normal">vs</span> Lab Testing</span>
+                    </div>
+                    <div class="py-2.5 flex justify-between items-baseline gap-2">
+                      <span class="text-slate-500 font-medium">Validity Period</span>
+                      <span class="text-right font-bold text-heading">Project <span class="text-slate-400 font-normal">vs</span> 1-5 Yr Cycle</span>
+                    </div>
+                    <div class="py-2.5 flex justify-between items-baseline gap-2">
+                      <span class="text-slate-500 font-medium">Renewal Cycle?</span>
+                      <span class="text-right font-bold text-heading">No <span class="text-slate-400 font-normal">vs</span> Mandatory</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Item 2: Board Scrutiny -->
-              <div class="border border-line bg-white p-4 shadow-xs">
-                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">02 &middot; Inspection Focus</span>
-                <h4 class="text-[15px] font-bold text-heading mt-0.5">What does the board judge?</h4>
-                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
-                  <div class="pr-2 border-r border-line">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
-                    <p class="text-slate-700 leading-snug">Site suitability, layout and proposed control design</p>
-                  </div>
-                  <div class="pl-1">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
-                    <p class="text-slate-700 leading-snug">Installed systems and physical lab test reports</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 3: Typical Timeline -->
-              <div class="border border-line bg-white p-4 shadow-xs">
-                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">03 &middot; Turnaround</span>
-                <h4 class="text-[15px] font-bold text-heading mt-0.5">Typical Approval Timeline</h4>
-                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
-                  <div class="pr-2 border-r border-line">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
-                    <p class="text-heading font-bold text-sm leading-snug">30 to 60 working days</p>
-                  </div>
-                  <div class="pl-1">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
-                    <p class="text-heading font-bold text-sm leading-snug">30 to 45 working days</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 4: Validity Period -->
-              <div class="border border-line bg-white p-4 shadow-xs">
-                <span class="text-[10px] font-bold tracking-[1.5px] uppercase text-slate-400">04 &middot; Duration</span>
-                <h4 class="text-[15px] font-bold text-heading mt-0.5">Validity &amp; Expiry</h4>
-                <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-line text-[13px]">
-                  <div class="pr-2 border-r border-line">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-secondary-600 mb-1">CTE</span>
-                    <p class="text-slate-700 leading-snug">Until project completion or period fixed by board</p>
-                  </div>
-                  <div class="pl-1">
-                    <span class="inline-block text-[11px] font-bold tracking-wider uppercase text-primary mb-1">CTO</span>
-                    <p class="text-slate-700 leading-snug">1 to 5 years by category, renewable</p>
-                  </div>
-                </div>
+              <!-- 3 Progress Dots Indicator -->
+              <div class="flex justify-center items-center gap-1.5 mt-2">
+                <span id="dot0" class="w-5 h-1.5 bg-secondary rounded-full transition-all"></span>
+                <span id="dot1" class="w-1.5 h-1.5 bg-slate-300 rounded-full transition-all"></span>
+                <span id="dot2" class="w-1.5 h-1.5 bg-slate-300 rounded-full transition-all"></span>
               </div>
             </div>
 
@@ -1572,6 +1608,26 @@
         btn.classList.add('is-active');
         document.getElementById(btn.dataset.tab).classList.add('is-active');
       }));
+
+      /* ---------- Mobile CTE Horizontal Scroll Indicator ---------- */
+      const cteScroll = document.getElementById('cteScroll');
+      if (cteScroll) {
+        cteScroll.addEventListener('scroll', () => {
+          const scrollLeft = cteScroll.scrollLeft;
+          const cardWidth = cteScroll.firstElementChild ? cteScroll.firstElementChild.offsetWidth : 300;
+          const activeIndex = Math.min(2, Math.max(0, Math.round(scrollLeft / cardWidth)));
+          ['dot0', 'dot1', 'dot2'].forEach((id, i) => {
+            const dot = document.getElementById(id);
+            if (dot) {
+              if (i === activeIndex) {
+                dot.className = 'w-5 h-1.5 bg-secondary rounded-full transition-all';
+              } else {
+                dot.className = 'w-1.5 h-1.5 bg-slate-300 rounded-full transition-all';
+              }
+            }
+          });
+        }, { passive: true });
+      }
 
       /* ---------- Testimonials Slider ---------- */
       const quotes = document.querySelectorAll('.quote-slide');
