@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aravalli Envirolab &amp; Consultancy Services | NABL Testing &amp; Statutory Approvals</title>
-  <meta name="description" content="Aravalli Envirolab &amp; Consultancy Services: 20+ years of NABL-grade environmental testing (Water, Air, Stack, Soil, Noise) and turnkey statutory clearances (CTE, CTO, CGWA Ground Water NOC) across Jaipur, Kotputli-Behror, and Rajasthan.">
+  <title>Aravalli Envirolab &amp; Consultancy Services | Pollution NOC, Hydrogeology &amp; Environmental Laboratory</title>
+  <meta name="description" content="Aravalli Envirolab &amp; Consultancy Services is a geologist-led environmental consultancy and laboratory securing Pollution NOC (CTE and CTO), Groundwater NOC (CGWA) and environmental clearances for industrial plants and commercial infrastructure across India.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
@@ -12,1211 +12,1493 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <!-- Premium European Engineering Fonts: Outfit (Display/Headings) & Plus Jakarta Sans (Body) -->
+  <!-- Preload hero image for instant mobile render -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80">
+
+  <!-- Human-Crafted Editorial Typography: Inter Display & Text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ecoNavy: {
-              DEFAULT: '#00254C',
-              dark: '#001833',
-              deep: '#001226',
-              light: '#003366',
-            },
-            ecoBlue: {
-              DEFAULT: '#0079C1',
-              hover: '#0091E8',
-              faded: '#E6F4FB',
-            },
-            ecoGreen: {
-              DEFAULT: '#00BE21',
-              hover: '#00D625',
-              faded: '#E8F9EB',
-            },
-            slateInk: '#0B1528',
-            slateSub: '#475569',
-            lightBg: '#F8FAFC',
-            surfaceBorder: '#E2E8F0',
+            primary: { DEFAULT: '#1e4387', 50: '#eef3fb', 100: '#d9e4f5', 200: '#b3c8ea', 300: '#8aa7d9', 600: '#1e4387', 700: '#18386f', 800: '#132c58', 900: '#0b1a36', 950: '#07122a' },
+            secondary: { DEFAULT: '#f59e0b', 50: '#fff8eb', 100: '#feefc7', 600: '#d97706' },
+            ink: '#0b1a36',
+            heading: '#101828',
+            line: '#e4e7ec'
           },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            display: ['"Outfit"', 'system-ui', 'sans-serif'],
-          },
-          maxWidth: {
-            site: '1320px',
-          }
+          fontFamily: { sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'] },
+          maxWidth: { site: '1320px' }
         }
       }
     }
   </script>
 
   <style>
-    /* Strict font enforcement so browser never falls back to generic fonts */
-    * {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6, .font-display, .brand-title {
-      font-family: 'Outfit', sans-serif !important;
-      letter-spacing: -0.025em;
-    }
+    /* ---------- Base typography & aesthetics ---------- */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-synthesis: none; -webkit-font-smoothing: antialiased; color: #475467; }
+    h1, h2, h3, h4 { color: #101828; letter-spacing: -0.025em; }
+    .display { font-size: 2.35rem; line-height: 1.08; font-weight: 700; letter-spacing: -0.035em; }
+    @media (min-width: 640px) { .display { font-size: 3rem; } }
+    @media (min-width: 768px) { .display { font-size: 4.25rem; line-height: 1.05; } }
+    @media (min-width: 1280px) { .display { font-size: 4.85rem; } }
+    .h2-xl { font-size: 1.85rem; line-height: 1.15; font-weight: 700; letter-spacing: -0.03em; }
+    @media (min-width: 768px) { .h2-xl { font-size: 2.75rem; } }
+    .lead-xl { font-size: 1.35rem; line-height: 1.35; font-weight: 500; letter-spacing: -0.02em; color: #101828; }
+    @media (min-width: 768px) { .lead-xl { font-size: 2.25rem; } }
+    .eyebrow { display: inline-flex; align-items: center; gap: .65rem; font-size: .72rem; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: #1e4387; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: #f59e0b; }
+    .eyebrow-light { color: #fcd34d; }
+    .kpi { font-size: 2.85rem; line-height: 1; font-weight: 300; letter-spacing: -0.04em; color: #0b1a36; }
+    @media (min-width: 768px) { .kpi { font-size: 4.25rem; } }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
-    body {
-      color: #0B1528;
-      background-color: #FFFFFF;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+    /* ---------- Hero slides ---------- */
+    .hero-slide { opacity: 0; visibility: hidden; transition: opacity 1.1s ease, visibility 1.1s ease; }
+    .hero-slide.is-active { opacity: 1; visibility: visible; }
+    .hero-slide .hero-img { transform: scale(1.08); transition: transform 7s ease-out; }
+    .hero-slide.is-active .hero-img { transform: scale(1); }
+    .hero-slide .hero-copy { opacity: 0; transform: translateY(28px); transition: opacity .9s ease .35s, transform .9s ease .35s; }
+    .hero-slide.is-active .hero-copy { opacity: 1; transform: none; }
+    .hero-img-1 { background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80'); }
+    .hero-img-2 { background-image: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80'); }
+    .hero-img-3 { background-image: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&w=1600&q=80'); }
+    .hero-shade { background: linear-gradient(90deg, rgba(7,18,42,.94) 0%, rgba(7,18,42,.78) 45%, rgba(7,18,42,.35) 100%), linear-gradient(0deg, rgba(7,18,42,.9) 0%, rgba(7,18,42,0) 40%); }
+    .hero-tab .bar { transform: scaleX(0); transform-origin: left; }
+    .hero-tab.is-active .bar { animation: fill 7s linear forwards; }
+    .hero-tab.is-active .tab-title { color: #fff; }
+    @keyframes fill { to { transform: scaleX(1); } }
 
-    /* 3D Perspective Card Tilt Effects */
-    .perspective-container {
-      perspective: 1200px;
-    }
-    .tilt-card {
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
-      transform-style: preserve-3d;
-      will-change: transform;
-    }
+    /* ---------- Header ---------- */
+    #siteHeader { transition: background-color .35s ease, box-shadow .35s ease; }
+    .hdr-text { color: #fff; transition: color .3s ease; }
+    .hdr-sub { color: rgba(255,255,255,.75); }
+    .hdr-line { border-color: rgba(255,255,255,.15); }
+    .util { max-height: 44px; overflow: hidden; transition: max-height .35s ease, opacity .35s ease; }
+    #siteHeader.is-solid, #siteHeader.is-hover { background: #fff; box-shadow: 0 10px 30px -18px rgba(11,26,54,.35); }
+    #siteHeader.is-solid .hdr-text, #siteHeader.is-hover .hdr-text { color: #101828; }
+    #siteHeader.is-solid .hdr-sub, #siteHeader.is-hover .hdr-sub { color: #667085; }
+    #siteHeader.is-solid .hdr-line, #siteHeader.is-hover .hdr-line { border-color: #e4e7ec; }
+    #siteHeader.is-solid .util { max-height: 0; opacity: 0; }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -28px; height: 3px; background: #f59e0b; transform: scaleX(0); transition: transform .25s ease; }
+    .has-mega:hover .nav-link::after, .nav-link:hover::after { transform: scaleX(1); }
 
-    /* Glassmorphism & Micro-borders */
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(226, 232, 240, 0.8);
-    }
-    .glass-dark {
-      background: rgba(0, 37, 76, 0.82);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
+    /* Mega menu */
+    .mega { opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .25s ease, transform .25s ease, visibility .25s ease; }
+    .has-mega:hover .mega, .has-mega:focus-within .mega { opacity: 1; visibility: visible; transform: none; }
 
-    /* Cinematic Hero Gradient with Visual Image Layer */
-    .hero-bg-layer {
-      background-image: linear-gradient(135deg, rgba(0, 24, 51, 0.94) 0%, rgba(0, 37, 76, 0.88) 55%, rgba(0, 74, 152, 0.75) 100%),
-                        url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    /* ---------- Drawers, search, overlay ---------- */
+    .overlay { opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease; }
+    .overlay.is-open { opacity: 1; visibility: visible; }
+    .drawer-left { transform: translateX(-100%); transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .drawer-right { transform: translateX(100%); transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .drawer-left.is-open, .drawer-right.is-open { transform: translateX(0); }
+    .search-panel { transform: translateY(-100%); transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .search-panel.is-open { transform: translateY(0); }
+    body.lock { overflow: hidden; }
+    .sub-acc { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .acc-open .sub-acc { grid-template-rows: 1fr; }
+    .acc-open .acc-icon { transform: rotate(45deg); }
+    .acc-icon { transition: transform .3s ease; }
 
-    /* Mobile view rule: Remove bulky multi-column footer on mobile screens */
-    @media (max-width: 768px) {
-      .mobile-hide-footer {
-        display: none !important;
-      }
-    }
+    /* ---------- Capabilities list ---------- */
+    .cap-row { transition: background-color .3s ease; }
+    .cap-row .cap-arrow { transition: transform .3s ease, background-color .3s ease, color .3s ease; }
+    .cap-row:hover .cap-arrow { transform: translateX(4px); background: #1e4387; color: #fff; }
+    .cap-row:hover .cap-title { color: #1e4387; }
+    .cap-row.in-cart .add-btn { background: #1e4387; color: #fff; border-color: #1e4387; }
+    .cap-preview img { opacity: 0; transition: opacity .5s ease; }
+    .cap-preview img.is-active { opacity: 1; }
 
-    /* Clean badge tag styling */
-    .param-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      padding: 0.25rem 0.55rem;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
+    /* ---------- Sector tiles ---------- */
+    .sector-tile img { transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+    .sector-tile:hover img { transform: scale(1.06); }
+    .sector-tile .sector-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .45s ease, opacity .45s ease; }
+    .sector-tile:hover .sector-desc { max-height: 120px; opacity: 1; }
+    @media (hover: none) { .sector-tile .sector-desc { max-height: 120px; opacity: 1; } }
+
+    /* ---------- Cards ---------- */
+    .zoom-img { overflow: hidden; }
+    .zoom-img img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+    .group:hover .zoom-img img { transform: scale(1.05); }
+    .link-arrow svg { transition: transform .25s ease; }
+    .link-arrow:hover svg { transform: translateX(4px); }
+
+    /* ---------- Quotes ---------- */
+    .quote-slide { display: none; }
+    .quote-slide.is-active { display: block; animation: fadeUp .6s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- FAQ ---------- */
+    .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq-item.is-open .faq-body { grid-template-rows: 1fr; }
+    .faq-item.is-open .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .3s ease; }
+
+    /* ---------- Tabs ---------- */
+    .tab-btn.is-active { color: #101828; border-color: #f59e0b; }
+    .tab-panel { display: none; }
+    .tab-panel.is-active { display: block; }
+
+    /* ---------- Misc ---------- */
+    .grid-lines { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 64px 64px; }
+    .contour { background-image: repeating-radial-gradient(circle at 85% 15%, rgba(255,255,255,.06) 0 1px, transparent 1px 28px); }
+    .toast { transform: translateY(200%); opacity: 0; transition: transform .35s ease, opacity .35s ease; }
+    .toast.is-show { transform: translateY(0); opacity: 1; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { scrollbar-width: none; }
+    .footer-mark { font-size: 13vw; }
+    @media (min-width: 1024px) { .footer-mark { font-size: 10rem; } }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-slide .hero-img { transition: none; transform: none; }
+      .hero-tab.is-active .bar { animation: none; transform: scaleX(1); }
     }
   </style>
 </head>
-<body class="selection:bg-ecoBlue selection:text-white">
+<body class="bg-white">
 
-  <!-- TOP UTILITY BAR (Clean, high-trust accreditations & contact) -->
-  <header class="border-b border-slate-100 bg-slate-50/90 text-xs text-slateSub hidden md:block">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
-      <div class="flex items-center gap-6">
-        <span class="inline-flex items-center gap-2 font-medium text-ecoNavy">
-          <span class="w-2 h-2 rounded-full bg-ecoGreen animate-pulse"></span>
-          NABL ISO/IEC 17025 Compliant Parameters
-        </span>
-        <span class="text-slate-300">|</span>
-        <span class="inline-flex items-center gap-1.5 font-medium">
-          <svg class="w-3.5 h-3.5 text-ecoBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          20+ Years Geologist-Led Leadership
-        </span>
-        <span class="text-slate-300">|</span>
-        <span class="text-slate-600 font-medium">Regional Hubs: Jaipur &bull; Kotputli-Behror &bull; Neemrana</span>
+  <!-- =============================== HEADER =============================== -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-40">
+    <!-- Utility bar -->
+    <div class="util hidden lg:block border-b hdr-line">
+      <div class="max-w-site mx-auto px-6 h-10 flex items-center justify-between text-[12px] font-medium">
+        <p class="hdr-sub">Geologist-led environmental consultancy and laboratory &middot; Jaipur &amp; Kotputli-Behror, Rajasthan</p>
+        <div class="flex items-center gap-6 hdr-sub">
+          <a href="#credentials" class="hover:text-secondary">Accreditations</a>
+          <a href="#insights" class="hover:text-secondary">Insights</a>
+          <a href="#contact" class="hover:text-secondary">Regional Hubs</a>
+          <a href="tel:+919376590132" class="hover:text-secondary font-semibold text-white">+91 93765 90132</a>
+        </div>
       </div>
+    </div>
 
-      <div class="flex items-center gap-5">
-        <a href="tel:+919376590132" class="inline-flex items-center gap-1.5 font-semibold text-ecoNavy hover:text-ecoBlue transition-colors">
-          <svg class="w-3.5 h-3.5 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-          +91 93765 90132
+    <!-- Main Navigation Bar -->
+    <div class="border-b hdr-line">
+      <div class="max-w-site mx-auto px-4 lg:px-6 h-[72px] lg:h-20 flex items-center justify-between gap-4">
+        <!-- Mobile menu toggle -->
+        <button type="button" class="lg:hidden -ml-2 p-2 hdr-text" data-open="menuDrawer" aria-label="Open menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 7h18M3 12h18M3 17h12"/></svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 shrink-0" aria-label="Aravalli Envirolab home">
+          <img src="logo.png" alt="Aravalli Envirolab Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+          <span class="leading-none">
+            <span class="block text-[18px] sm:text-[20px] font-extrabold tracking-tight hdr-text">ARAVALLI</span>
+            <span class="block mt-1 text-[9px] sm:text-[10px] font-semibold tracking-[1.8px] uppercase hdr-sub">Envirolab &amp; Consultancy</span>
+          </span>
         </a>
-        <a href="mailto:aravallienvirolab@gmail.com" class="inline-flex items-center gap-1.5 hover:text-ecoBlue transition-colors">
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          aravallienvirolab@gmail.com
-        </a>
+
+        <!-- Desktop Navigation (Responsive spacing to prevent laptop overlap) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-8 text-[13px] xl:text-[14px] font-semibold hdr-text h-full shrink-0">
+          <div class="has-mega h-full flex items-center">
+            <a href="#capabilities" class="nav-link flex items-center gap-1.5 py-6">Services
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <!-- Mega menu -->
+            <div class="mega absolute left-0 right-0 top-full bg-white border-t border-line shadow-2xl shadow-primary-900/10">
+              <div class="max-w-site mx-auto px-6 py-10 grid grid-cols-12 gap-10 text-heading">
+                <div class="col-span-3">
+                  <p class="eyebrow">Consents &amp; Approvals</p>
+                  <ul class="mt-5 space-y-3.5 text-[15px] font-medium">
+                    <li><a href="#capabilities" class="hover:text-primary">Consent to Establish (CTE)</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">Consent to Operate (CTO)</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">CTO Renewal &amp; Expansion</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">Environmental Clearance (SEIAA)</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <p class="eyebrow">Geology &amp; Water</p>
+                  <ul class="mt-5 space-y-3.5 text-[15px] font-medium">
+                    <li><a href="#capabilities" class="hover:text-primary">Groundwater NOC (CGWA)</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">Hydrogeological Survey Reports</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">Recharge &amp; Water Balance</a></li>
+                    <li><a href="#capabilities" class="hover:text-primary">Site Suitability Studies</a></li>
+                  </ul>
+                </div>
+                <div class="col-span-3">
+                  <p class="eyebrow">Envirolab</p>
+                  <ul class="mt-5 space-y-3.5 text-[15px] font-medium">
+                    <li><a href="#envirolab" class="hover:text-primary">Ambient Air &amp; Stack Monitoring</a></li>
+                    <li><a href="#envirolab" class="hover:text-primary">Water &amp; Wastewater Testing</a></li>
+                    <li><a href="#envirolab" class="hover:text-primary">Soil &amp; Noise Analysis</a></li>
+                    <li><a href="#envirolab" class="hover:text-primary">Six-monthly Compliance Reports</a></li>
+                  </ul>
+                </div>
+                <a href="#regulatory" class="col-span-3 group block">
+                  <div class="zoom-img aspect-[16/10]"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=70" alt="Survey team on project site" class="w-full h-full object-cover"></div>
+                  <p class="mt-4 text-xs font-bold tracking-[2px] uppercase text-secondary-600">Regulatory Brief</p>
+                  <p class="mt-1 font-semibold leading-snug">CTE vs CTO: what your project needs, and when</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#sectors" class="nav-link py-6">Sectors</a>
+          <a href="#envirolab" class="nav-link py-6">Envirolab</a>
+          <a href="#projects" class="nav-link py-6">Projects</a>
+          <a href="#insights" class="nav-link py-6">Insights</a>
+          <a href="#about" class="nav-link py-6">About</a>
+        </nav>
+
+        <!-- Header Actions: Search, Scope Cart & Contact Button -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button type="button" class="p-2.5 hdr-text hover:text-secondary" data-open-search aria-label="Search">
+            <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M20 20l-3.5-3.5"/></svg>
+          </button>
+          <button type="button" class="relative p-2.5 hdr-text hover:text-secondary" data-open="cartDrawer" aria-label="Open enquiry list">
+            <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            <span id="cartCount" class="absolute top-1 right-0.5 min-w-[18px] h-[18px] px-1 bg-secondary text-[10px] font-bold text-primary-950 grid place-items-center">0</span>
+          </button>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 ml-1 sm:ml-3 px-5 sm:px-6 h-11 sm:h-12 bg-secondary text-primary-950 text-[12px] sm:text-[13px] font-bold tracking-wide uppercase hover:bg-white hover:text-primary transition shrink-0 whitespace-nowrap">
+            Contact Us
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION (Engineered to NEVER overlap on any laptop, tablet or desktop screen) -->
-  <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-200">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 w-full gap-4">
-        
-        <!-- Brand Logo & Clean Corporate Typography -->
-        <a href="#hero" class="flex items-center gap-3.5 shrink-0 group">
-          <img src="logo.png" alt="Aravalli Envirolab Logo" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='ChatGPT Image Sep 25, 2026, 06_39_51 PM.png'">
-          <div class="flex flex-col">
-            <span class="font-display font-extrabold text-base sm:text-lg lg:text-xl tracking-tight text-ecoNavy leading-none">
-              ARAVALLI <span class="text-ecoBlue font-bold">ENVIROLAB</span>
-            </span>
-            <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase text-slate-500 mt-1">
-              Testing Lab &amp; Consultancy Services
-            </span>
-          </div>
-        </a>
+  <!-- =============================== SEARCH MODAL =============================== -->
+  <div id="searchPanel" class="search-panel fixed inset-x-0 top-0 z-[60] bg-white shadow-2xl" role="dialog" aria-label="Search">
+    <div class="max-w-site mx-auto px-4 lg:px-6 py-8 md:py-14">
+      <div class="flex items-center justify-between">
+        <p class="eyebrow">Search Aravalli</p>
+        <button type="button" class="p-2 text-heading hover:text-primary" data-close-search aria-label="Close search">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <form id="searchForm" class="mt-6 relative border-b-2 border-heading">
+        <input id="searchInput" type="search" placeholder="Search services, sectors, insights..." class="w-full pr-12 py-4 text-xl sm:text-2xl md:text-4xl font-medium tracking-tight text-heading placeholder:text-slate-300 focus:outline-none bg-transparent">
+        <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-heading" aria-label="Submit search">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M20 20l-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <div class="mt-6 flex flex-wrap items-center gap-2 text-sm">
+        <span class="text-slate-500 mr-2 text-xs sm:text-sm">Popular searches:</span>
+        <button type="button" class="search-chip px-3.5 py-1.5 border border-line text-xs font-medium text-heading hover:border-primary hover:text-primary">Consent to Establish</button>
+        <button type="button" class="search-chip px-3.5 py-1.5 border border-line text-xs font-medium text-heading hover:border-primary hover:text-primary">CTO Renewal</button>
+        <button type="button" class="search-chip px-3.5 py-1.5 border border-line text-xs font-medium text-heading hover:border-primary hover:text-primary">Groundwater NOC</button>
+        <button type="button" class="search-chip px-3.5 py-1.5 border border-line text-xs font-medium text-heading hover:border-primary hover:text-primary">Stack Monitoring</button>
+      </div>
+      <ul id="searchResults" class="mt-6 divide-y divide-line max-h-[45vh] overflow-y-auto"></ul>
+    </div>
+  </div>
 
-        <!-- Desktop Navigation Links (Clean, concise titles with whitespace-nowrap) -->
-        <div class="hidden xl:flex items-center gap-5 2xl:gap-7 text-sm font-semibold text-slate-700">
-          <a href="#applications" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Applications</a>
-          <a href="#testing-lab" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Testing Lab</a>
-          <a href="#statutory-clearances" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Clearances (CTE/CTO)</a>
-          <a href="#equipment-showcase" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Equipment</a>
-          <a href="#industrial-hubs" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Industrial Hubs</a>
-          <a href="#technical-library" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">Library</a>
-          <a href="#about-us" class="hover:text-ecoBlue transition-colors py-2 whitespace-nowrap">About Us</a>
+  <!-- =============================== OVERLAY =============================== -->
+  <div id="overlay" class="overlay fixed inset-0 z-50 bg-primary-950/70 backdrop-blur-sm"></div>
+
+  <!-- =============================== MENU DRAWER =============================== -->
+  <aside id="menuDrawer" class="drawer-left fixed inset-y-0 left-0 z-[55] w-[88%] max-w-sm bg-primary-950 text-white flex flex-col" aria-label="Menu">
+    <div class="flex items-center justify-between px-6 h-[72px] border-b border-white/10">
+      <span class="leading-none">
+        <span class="block text-lg font-extrabold tracking-tight">ARAVALLI</span>
+        <span class="block mt-1 text-[9px] font-semibold tracking-[1.8px] uppercase text-white/60">Envirolab &amp; Consultancy</span>
+      </span>
+      <button type="button" class="p-2 -mr-2" data-close aria-label="Close menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-4">
+      <ul class="text-lg font-semibold tracking-tight">
+        <li class="acc border-b border-white/10">
+          <button type="button" class="acc-btn w-full flex items-center justify-between py-4">Services <span class="acc-icon text-secondary text-2xl leading-none">+</span></button>
+          <div class="sub-acc"><div class="overflow-hidden">
+            <ul class="pb-4 space-y-3 text-[15px] font-medium text-white/70">
+              <li><a href="#capabilities" data-close class="hover:text-secondary">Consent to Establish (CTE)</a></li>
+              <li><a href="#capabilities" data-close class="hover:text-secondary">Consent to Operate &amp; Renewal</a></li>
+              <li><a href="#capabilities" data-close class="hover:text-secondary">Groundwater NOC (CGWA)</a></li>
+              <li><a href="#capabilities" data-close class="hover:text-secondary">Hydrogeological Studies</a></li>
+              <li><a href="#capabilities" data-close class="hover:text-secondary">Environmental Clearance (SEIAA)</a></li>
+              <li><a href="#envirolab" data-close class="hover:text-secondary">Envirolab Testing &amp; Monitoring</a></li>
+            </ul>
+          </div></div>
+        </li>
+        <li class="border-b border-white/10"><a href="#sectors" data-close class="block py-4">Sectors</a></li>
+        <li class="border-b border-white/10"><a href="#envirolab" data-close class="block py-4">Envirolab</a></li>
+        <li class="border-b border-white/10"><a href="#projects" data-close class="block py-4">Projects</a></li>
+        <li class="border-b border-white/10"><a href="#insights" data-close class="block py-4">Insights</a></li>
+        <li class="border-b border-white/10"><a href="#about" data-close class="block py-4">About</a></li>
+        <li><a href="#contact" data-close class="block py-4">Contact</a></li>
+      </ul>
+      <div class="mt-8 border-t border-white/10 pt-6 text-sm text-white/70 space-y-2">
+        <p class="text-xs font-bold tracking-[2px] uppercase text-secondary">Head Office &amp; Laboratory</p>
+        <p>Jaipur, Rajasthan, India</p>
+        <p class="text-xs text-white/50">Regional Hubs: Sitapura &middot; VKIA &middot; Neemrana &middot; Bhiwadi</p>
+        <a href="tel:+919376590132" class="block text-white font-semibold pt-1">+91 93765 90132</a>
+        <a href="mailto:aravallienvirolab@gmail.com" class="block text-secondary">aravallienvirolab@gmail.com</a>
+      </div>
+    </nav>
+    <div class="p-6 border-t border-white/10">
+      <a href="#contact" data-close class="flex justify-center w-full py-4 bg-secondary text-primary-950 text-sm font-bold uppercase tracking-wide">Speak to an Expert</a>
+    </div>
+  </aside>
+
+  <!-- =============================== SCOPE / ENQUIRY DRAWER =============================== -->
+  <aside id="cartDrawer" class="drawer-right fixed inset-y-0 right-0 z-[55] w-[92%] max-w-md bg-white flex flex-col shadow-2xl" aria-label="Enquiry list">
+    <div class="flex items-center justify-between px-6 h-[72px] border-b border-line">
+      <div>
+        <p class="text-lg font-bold text-heading tracking-tight">Project Scope Enquiry</p>
+        <p class="text-xs text-slate-500"><span id="cartCountText">0</span> service(s) selected</p>
+      </div>
+      <button type="button" class="p-2 -mr-2 text-heading" data-close aria-label="Close enquiry list">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto px-6 py-5">
+      <div id="cartEmpty" class="py-12">
+        <p class="text-2xl font-semibold tracking-tight text-heading">Build your scope.</p>
+        <p class="mt-2 text-sm text-slate-500">Add the statutory approvals and testing parameters your project requires. We will return a single, itemised proposal within one working day.</p>
+        <a href="#capabilities" data-close class="link-arrow mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary uppercase tracking-wide">Browse capabilities
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <ul id="cartList" class="divide-y divide-line"></ul>
+    </div>
+    <div class="p-6 border-t border-line bg-slate-50">
+      <p class="text-xs text-slate-500 mb-4">Statutory fees vary by state pollution board, industry category and project capital. Professional fees are quoted separately.</p>
+      <a href="#contact" data-close class="flex justify-center w-full py-4 bg-primary text-white text-sm font-bold uppercase tracking-wide hover:bg-primary-800">Request Itemised Proposal</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =============================== HERO SLIDER =============================== -->
+    <section id="hero" class="relative h-[100svh] min-h-[640px] max-h-[960px] bg-primary-950 overflow-hidden">
+      <!-- Slide 1: Pollution NOC -->
+      <div class="hero-slide is-active absolute inset-0" data-slide="0">
+        <div class="hero-img hero-img-1 absolute inset-0 bg-cover bg-center"></div>
+        <div class="hero-shade absolute inset-0"></div>
+        <div class="relative h-full max-w-site mx-auto px-4 lg:px-6 flex items-center pt-16 pb-24">
+          <div class="hero-copy max-w-4xl">
+            <p class="eyebrow eyebrow-light">Pollution &amp; Environment NOC</p>
+            <h1 class="display mt-5 sm:mt-6 !text-white">Environmental approvals, built on solid ground.</h1>
+            <p class="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-white/85">Geologist-led Consent to Establish (CTE) and Consent to Operate (CTO) for industrial plants and commercial buildings, filed with every major State Pollution Control Board.</p>
+            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3">
+              <a href="#capabilities" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 bg-secondary text-primary-950 text-sm font-bold uppercase tracking-wide hover:bg-white transition">Explore Capabilities</a>
+              <a href="#contact" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 border border-white/40 text-white text-sm font-bold uppercase tracking-wide hover:bg-white hover:text-primary-950 transition">Speak to an Expert</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Hydrogeology & Groundwater -->
+      <div class="hero-slide absolute inset-0" data-slide="1">
+        <div class="hero-img hero-img-2 absolute inset-0 bg-cover bg-center"></div>
+        <div class="hero-shade absolute inset-0"></div>
+        <div class="relative h-full max-w-site mx-auto px-4 lg:px-6 flex items-center pt-16 pb-24">
+          <div class="hero-copy max-w-4xl">
+            <p class="eyebrow eyebrow-light">Hydrogeology &amp; Groundwater</p>
+            <h2 class="display mt-5 sm:mt-6 !text-white">Every drop of water, accounted for.</h2>
+            <p class="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-white/85">Aquifer studies, recharge design and Groundwater NOC prepared and signed by qualified hydrogeologists, so your water plan survives scrutiny.</p>
+            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3">
+              <a href="#capabilities" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 bg-secondary text-primary-950 text-sm font-bold uppercase tracking-wide hover:bg-white transition">Groundwater Services</a>
+              <a href="#contact" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 border border-white/40 text-white text-sm font-bold uppercase tracking-wide hover:bg-white hover:text-primary-950 transition">Book a Site Study</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Envirolab Testing -->
+      <div class="hero-slide absolute inset-0" data-slide="2">
+        <div class="hero-img hero-img-3 absolute inset-0 bg-cover bg-center"></div>
+        <div class="hero-shade absolute inset-0"></div>
+        <div class="relative h-full max-w-site mx-auto px-4 lg:px-6 flex items-center pt-16 pb-24">
+          <div class="hero-copy max-w-4xl">
+            <p class="eyebrow eyebrow-light">Aravalli Envirolab</p>
+            <h2 class="display mt-5 sm:mt-6 !text-white">Data you can defend before any board.</h2>
+            <p class="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-white/85">Our in-house environmental laboratory tests air, stack, water, soil and noise, giving your application and compliance reports one reliable source of truth.</p>
+            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3">
+              <a href="#envirolab" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 bg-secondary text-primary-950 text-sm font-bold uppercase tracking-wide hover:bg-white transition">Inside the Lab</a>
+              <a href="#contact" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 border border-white/40 text-white text-sm font-bold uppercase tracking-wide hover:bg-white hover:text-primary-950 transition">Schedule Monitoring</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide tabs -->
+      <div class="absolute bottom-0 inset-x-0 z-10">
+        <div class="max-w-site mx-auto px-4 lg:px-6">
+          <div class="grid grid-cols-3 border-t border-white/20">
+            <button type="button" class="hero-tab is-active relative text-left pt-4 sm:pt-5 pb-6 sm:pb-7 pr-2 sm:pr-4" data-go="0">
+              <span class="bar absolute top-[-1px] left-0 right-0 h-[3px] bg-secondary"></span>
+              <span class="block text-xs font-bold text-secondary">01</span>
+              <span class="tab-title hidden md:block mt-1 text-sm font-semibold text-white/60">Pollution NOC: CTE &amp; CTO</span>
+            </button>
+            <button type="button" class="hero-tab relative text-left pt-4 sm:pt-5 pb-6 sm:pb-7 pr-2 sm:pr-4" data-go="1">
+              <span class="bar absolute top-[-1px] left-0 right-0 h-[3px] bg-secondary"></span>
+              <span class="block text-xs font-bold text-secondary">02</span>
+              <span class="tab-title hidden md:block mt-1 text-sm font-semibold text-white/60">Groundwater &amp; Hydrogeology</span>
+            </button>
+            <button type="button" class="hero-tab relative text-left pt-4 sm:pt-5 pb-6 sm:pb-7 pr-2 sm:pr-4" data-go="2">
+              <span class="bar absolute top-[-1px] left-0 right-0 h-[3px] bg-secondary"></span>
+              <span class="block text-xs font-bold text-secondary">03</span>
+              <span class="tab-title hidden md:block mt-1 text-sm font-semibold text-white/60">Envirolab Testing &amp; Monitoring</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== ABOUT / INTRO =============================== -->
+    <section id="about" class="py-20 md:py-32">
+      <div class="max-w-site mx-auto px-4 lg:px-6">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-16">
+          <div class="lg:col-span-3 reveal">
+            <p class="eyebrow">Who We Are</p>
+          </div>
+          <div class="lg:col-span-9 reveal">
+            <p class="lead-xl">Aravalli Envirolab &amp; Consultancy Services helps manufacturers and developers secure, operate and renew their environmental consents, with <span class="text-primary font-semibold">geology and laboratory science</span> that stands up to regulatory scrutiny.</p>
+            <div class="mt-8 sm:mt-10 grid md:grid-cols-2 gap-8 text-[16px] sm:text-[17px] leading-relaxed">
+              <p>Named after one of the oldest mountain systems on earth, we bring the patience and precision of field geology to a process too often treated as mere paperwork. Every application starts on site, with the soil, the water table and surrounding ecosystems.</p>
+              <p>Our environmental consultants, hydrogeologists and laboratory analysts work as one integrated team, ensuring the data in your file, the design of your pollution controls and the answers to board queries all originate from the same authoritative source.</p>
+            </div>
+            <a href="#contact" class="link-arrow mt-8 sm:mt-10 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wide text-primary border-b-2 border-secondary pb-1">About Aravalli
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </div>
 
-        <!-- Action CTA Button (Positioned safely with shrink-0 so it NEVER overlaps) -->
-        <div class="hidden md:flex items-center gap-3 shrink-0">
-          <a href="#contact" class="inline-flex items-center justify-center px-4 lg:px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-ecoBlue hover:bg-ecoBlue-hover shadow-sm hover:shadow-md transition-all duration-200 whitespace-nowrap">
-            Request Quote
-            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        <!-- Human-Crafted Metrics (Animated on Scroll) -->
+        <div class="mt-16 md:mt-28 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+          <div class="reveal border-t border-heading pt-6">
+            <p class="kpi"><span data-count="1200">0</span><span class="text-secondary">+</span></p>
+            <p class="mt-3 text-sm font-medium text-slate-500 max-w-[14rem]">Consents, NOCs and clearances secured for industrial clients</p>
+          </div>
+          <div class="reveal border-t border-heading pt-6">
+            <p class="kpi"><span data-count="20">0</span><span class="text-secondary">+</span></p>
+            <p class="mt-3 text-sm font-medium text-slate-500 max-w-[14rem]">Years of continuous field geology and board liaison experience</p>
+          </div>
+          <div class="reveal border-t border-heading pt-6">
+            <p class="kpi"><span data-count="18">0</span></p>
+            <p class="mt-3 text-sm font-medium text-slate-500 max-w-[14rem]">State pollution control boards we actively file and liaise with</p>
+          </div>
+          <div class="reveal border-t border-heading pt-6">
+            <p class="kpi"><span data-count="250">0</span><span class="text-secondary">+</span></p>
+            <p class="mt-3 text-sm font-medium text-slate-500 max-w-[14rem]">Environmental parameters routinely tested in our accredited lab</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CAPABILITIES =============================== -->
+    <section id="capabilities" class="py-20 md:py-28 bg-slate-50 border-y border-line">
+      <div class="max-w-site mx-auto px-4 lg:px-6 grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-28 reveal">
+            <p class="eyebrow">Capabilities</p>
+            <h2 class="h2-xl mt-5">Focused expertise, from first survey to final consent.</h2>
+            <p class="mt-5 text-[16px] sm:text-[17px] leading-relaxed max-w-md">We do fewer things, deeply. Six integrated services cover the full environmental approval life cycle of a manufacturing plant or commercial building.</p>
+
+            <!-- Desktop interactive image preview -->
+            <div class="cap-preview hidden lg:block relative mt-10 aspect-[4/3] overflow-hidden bg-primary-900 shadow-lg">
+              <img data-cap-img="0" class="is-active absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75" alt="Industrial plant preparing for Consent to Establish">
+              <img data-cap-img="1" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=75" alt="Operating industrial processing unit">
+              <img data-cap-img="2" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=900&q=75" alt="Groundwater aquifer survey">
+              <img data-cap-img="3" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=75" alt="Hydrogeological field survey">
+              <img data-cap-img="4" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=75" alt="Commercial towers and urban development">
+              <img data-cap-img="5" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=900&q=75" alt="Laboratory chemical and biological analysis">
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <ul id="capList" class="border-b border-line">
+            <!-- 01 Consent to Establish -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="0" data-service="Consent to Establish (CTE)">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">01</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Consent to Establish (CTE)</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Mandatory Pollution NOC before you break ground or expand. Detailed project report, site plan, pollution control design and board portal filing, handled end to end.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=75" alt="Consent to Establish plant site" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">New Plants</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Expansion</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Commercial Projects</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 02 Consent to Operate -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="1" data-service="Consent to Operate (CTO) &amp; Renewal">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">02</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Consent to Operate &amp; Renewal</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Operating consent once plant construction is complete, followed by proactive renewals backed by our own accredited emission and effluent lab test reports.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=75" alt="Industrial operations" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Plant Operations</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Timely Renewals</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Stack &amp; ETP Data</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 03 Groundwater NOC -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="2" data-service="Groundwater NOC (CGWA)">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">03</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Groundwater NOC (CGWA)</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Borewell abstraction permission from Central Ground Water Authority or State Ground Water Authority, supported by comprehensive aquifer profiling and rainwater recharge design.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=75" alt="Groundwater survey" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">CGWA NOC</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Industrial Borewells</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Recharge Shafts</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 04 Hydrogeological Studies -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="3" data-service="Hydrogeological Studies &amp; Surveys">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">04</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Hydrogeological Studies</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Field resistivity surveys, geological strata logs, pump testing and impact assessments, signed by senior qualified hydrogeologists for NOC and environmental clearance files.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=75" alt="Hydrogeological field team" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Field Resistivity</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Strata Profiling</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 05 Environmental Clearance -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="4" data-service="Environmental Clearance (SEIAA / MoEF&amp;CC)">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">05</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Environmental Clearance (SEIAA)</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">State SEIAA and Central MoEF&amp;CC clearances for large commercial real estate, mining blocks, hospitality resorts and infrastructure, complete with water balance and EMP.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75" alt="Large commercial project" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">SEIAA Approvals</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Building Projects</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- 06 Envirolab Monitoring & Compliance -->
+            <li class="cap-row reveal border-t border-line py-8 md:py-10 px-1 md:px-4 hover:bg-white transition" data-idx="5" data-service="Envirolab Monitoring &amp; Compliance">
+              <div class="flex gap-4 sm:gap-8">
+                <span class="text-sm font-bold text-secondary-600 pt-2 shrink-0">06</span>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="cap-title text-xl sm:text-2xl md:text-[28px] font-semibold transition-colors">Monitoring &amp; Compliance</h3>
+                    <span class="cap-arrow shrink-0 w-10 sm:w-11 h-10 sm:h-11 border border-line grid place-items-center text-heading"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  </div>
+                  <p class="mt-3 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Scheduled air, stack, effluent, noise and soil monitoring conducted by Aravalli Envirolab, coupled with mandatory six-monthly compliance filings and hazardous waste authorisations.</p>
+                  
+                  <!-- Mobile-visible photograph -->
+                  <div class="lg:hidden mt-4 aspect-[16/9] w-full overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=800&q=75" alt="Laboratory testing" class="w-full h-full object-cover" loading="lazy">
+                  </div>
+
+                  <div class="mt-5 flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">NABL Standards</span>
+                    <span class="text-xs font-semibold px-3 py-1.5 bg-white border border-line">Six-Monthly Filings</span>
+                    <button type="button" class="add-btn sm:ml-auto text-xs font-bold uppercase tracking-wide px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition"><span class="add-label">+ Add to enquiry</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== SECTORS =============================== -->
+    <section id="sectors" class="relative py-20 md:py-28 bg-primary-950 overflow-hidden">
+      <div class="absolute inset-0 grid-lines"></div>
+      <div class="relative max-w-site mx-auto px-4 lg:px-6">
+        <div class="grid lg:grid-cols-12 gap-8 items-end reveal">
+          <div class="lg:col-span-7">
+            <p class="eyebrow eyebrow-light">Sectors</p>
+            <h2 class="h2-xl mt-5 !text-white">Trusted by the sectors that build and run India.</h2>
+          </div>
+          <p class="lg:col-span-5 text-[16px] sm:text-[17px] leading-relaxed text-white/75">Each industrial sector carries its own pollution category, board inspection priorities and compliance thresholds. Our teams are organised directly around them.</p>
+        </div>
+
+        <!-- 6 Architectural Sector Cards (High visibility on mobile) -->
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=75" alt="Manufacturing &amp; Process Industry" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">01</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Manufacturing &amp; Process Industry</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Chemicals, textiles, engineering, food processing, packaging and metal fabrication units across all Red, Orange and Green categories.</span></p>
+            </div>
+          </a>
+
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=75" alt="Commercial Real Estate" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">02</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Commercial Real Estate</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Office parks, commercial malls, group housing societies and mixed-use developments requiring CTE, CTO, STP design and SEIAA clearances.</span></p>
+            </div>
+          </a>
+
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=75" alt="Hospitality &amp; Healthcare" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">03</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Hospitality &amp; Healthcare</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Luxury hotels, heritage resorts and multispeciality hospitals with STP treated discharge, DG acoustic controls, and biomedical waste protocols.</span></p>
+            </div>
+          </a>
+
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=75" alt="Mining &amp; Minerals" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">04</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Mining &amp; Minerals</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Stone crushers, quartz-feldspar grinding mills, masonry stone quarries and processing units where accurate geological field data governs approvals.</span></p>
+            </div>
+          </a>
+
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=900&q=75" alt="Infrastructure &amp; Construction" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">05</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Infrastructure &amp; Construction</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Ready-mix concrete (RMC) batching plants, hot-mix asphalt facilities and highway development corridors with ambient particulate monitoring.</span></p>
+            </div>
+          </a>
+
+          <a href="#contact" class="sector-tile reveal group relative block aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-primary-950">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=75" alt="Energy &amp; Warehousing" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950 via-primary-950/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="text-xs font-bold text-secondary">06</p>
+              <h3 class="mt-2 text-xl sm:text-2xl font-semibold !text-white">Energy &amp; Logistics</h3>
+              <p class="sector-desc text-sm text-white/80 leading-relaxed"><span class="block pt-3">Solar power parks, industrial warehousing logistics hubs, and utility installations requiring White category certification and groundwater intimation.</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== ENVIROLAB =============================== -->
+    <section id="envirolab" class="grid lg:grid-cols-2">
+      <!-- Laboratory Photography (Visible on all mobile and desktop viewports) -->
+      <div class="relative h-72 sm:h-96 lg:h-full min-h-[300px] lg:min-h-[580px] w-full bg-primary-900">
+        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1400&q=80" alt="Laboratory Analyst at Aravalli Envirolab" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute left-4 right-4 bottom-4 md:left-8 md:right-auto md:bottom-8 bg-white p-6 shadow-xl md:w-80">
+          <p class="kpi">72<span class="text-secondary text-3xl">hr</span></p>
+          <p class="mt-2 text-sm font-medium text-slate-500">Rapid turnaround for standard environmental air, stack and effluent test parameters</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 px-4 sm:px-8 lg:px-14 xl:px-20 py-16 md:py-24">
+        <div class="max-w-xl reveal">
+          <p class="eyebrow">Aravalli Envirolab</p>
+          <h2 class="h2-xl mt-5">An in-house laboratory that shortens every approval.</h2>
+          <p class="mt-5 text-[16px] sm:text-[17px] leading-relaxed">State pollution boards judge applications strictly on verifiable data. By running our own calibrated sampling equipment and chemical laboratory, we control data precision, timelines and chain-of-custody from site sampling to the final signed certificate.</p>
+        </div>
+
+        <!-- Testing Parameter Matrix (Clean Lettered Format A-F) -->
+        <div class="mt-10 grid grid-cols-2 border-t border-l border-line reveal">
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">A</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Ambient Air</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">PM10, PM2.5, SO2, NOx, CO</p>
+          </div>
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">B</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Stack Emission</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">Boilers, DG sets, furnaces, kilns</p>
+          </div>
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">C</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Water &amp; Effluent</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">ETP, STP, BOD, COD, Heavy Metals</p>
+          </div>
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">D</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Groundwater</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">IS 10500 drinking &amp; borewell profiling</p>
+          </div>
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">E</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Soil &amp; Sediment</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">Permeability, physical &amp; fertility testing</p>
+          </div>
+          <div class="border-r border-b border-line p-4 sm:p-6 bg-white">
+            <p class="text-xs font-bold text-secondary-600">F</p>
+            <p class="mt-2 font-semibold text-heading text-base sm:text-lg">Noise Monitoring</p>
+            <p class="mt-1 text-xs sm:text-sm text-slate-500">Day/Night ambient &amp; workplace Leq</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex justify-center items-center gap-3 px-8 h-13 sm:h-14 bg-primary text-white text-sm font-bold uppercase tracking-wide hover:bg-primary-800 transition">Schedule Lab Sampling</a>
+          <a href="tel:+919376590132" class="inline-flex justify-center items-center gap-3 px-6 h-13 sm:h-14 border border-line text-heading text-sm font-bold uppercase tracking-wide hover:border-primary transition">Call Lab Officer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== SELECTED PROJECTS =============================== -->
+    <section id="projects" class="py-20 md:py-28">
+      <div class="max-w-site mx-auto px-4 lg:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Selected Projects</p>
+            <h2 class="h2-xl mt-5">Outcomes, not just paperwork.</h2>
+          </div>
+          <a href="#contact" class="link-arrow inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wide text-primary border-b-2 border-secondary pb-1 self-start md:self-auto">Discuss your project
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
 
-        <!-- Mobile & Laptop Hamburger (Triggers below 1280px to guarantee zero text collision) -->
-        <div class="flex items-center xl:hidden">
-          <button id="mobileMenuToggle" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-lg text-ecoNavy hover:bg-slate-100 focus:outline-none">
-            <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div class="mt-14 grid lg:grid-cols-12 gap-10 lg:gap-8">
+          <!-- Featured Case Study -->
+          <article class="group reveal lg:col-span-7">
+            <div class="zoom-img aspect-[16/10] bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=75" alt="Process industry plant in Rajasthan" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="mt-6 grid sm:grid-cols-3 gap-6 items-start">
+              <div class="sm:col-span-2">
+                <p class="text-xs font-bold tracking-[2px] uppercase text-slate-400">Process Industry &middot; Rajasthan</p>
+                <h3 class="mt-2 text-xl sm:text-2xl font-semibold leading-snug group-hover:text-primary transition-colors">Red category manufacturing expansion approved after two earlier rejections</h3>
+                <p class="mt-3 text-sm text-slate-600 leading-relaxed">Our hydrogeologists re-engineered the effluent discharge calculation and presented groundwater recharge balance directly to board officials.</p>
+              </div>
+              <div class="sm:border-l border-line sm:pl-6">
+                <p class="kpi">42<span class="text-secondary text-2xl"> days</span></p>
+                <p class="mt-2 text-sm text-slate-500">From application refiling to formal CTE issuance</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 Supporting Case Studies -->
+          <div class="lg:col-span-5 grid gap-6 content-start">
+            <article class="group reveal grid grid-cols-5 gap-5 items-start">
+              <div class="col-span-2 zoom-img aspect-square bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=70" alt="Commercial complex NCR" class="w-full h-full object-cover" loading="lazy">
+              </div>
+              <div class="col-span-3">
+                <p class="text-xs font-bold tracking-[2px] uppercase text-slate-400">Commercial &middot; NCR</p>
+                <h3 class="mt-1 text-base sm:text-lg font-semibold leading-snug group-hover:text-primary transition-colors">CTE, Groundwater NOC and SEIAA clearance delivered as one programme</h3>
+                <p class="mt-1 text-xs text-slate-500">Zero coordination lag between building approvals and water abstraction.</p>
+              </div>
+            </article>
+
+            <article class="group reveal grid grid-cols-5 gap-5 items-start border-t border-line pt-6">
+              <div class="col-span-2 zoom-img aspect-square bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=70" alt="Resort Udaipur" class="w-full h-full object-cover" loading="lazy">
+              </div>
+              <div class="col-span-3">
+                <p class="text-xs font-bold tracking-[2px] uppercase text-slate-400">Hospitality &middot; Udaipur</p>
+                <h3 class="mt-1 text-base sm:text-lg font-semibold leading-snug group-hover:text-primary transition-colors">Hydrogeological study unlocked groundwater permission in critical zone</h3>
+                <p class="mt-1 text-xs text-slate-500">120-key resort secured CGWA approval with dedicated recharge shafts.</p>
+              </div>
+            </article>
+
+            <article class="group reveal grid grid-cols-5 gap-5 items-start border-t border-line pt-6">
+              <div class="col-span-2 zoom-img aspect-square bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=70" alt="Stone crushers minerals Rajasthan" class="w-full h-full object-cover" loading="lazy">
+              </div>
+              <div class="col-span-3">
+                <p class="text-xs font-bold tracking-[2px] uppercase text-slate-400">Minerals &middot; Rajasthan</p>
+                <h3 class="mt-1 text-base sm:text-lg font-semibold leading-snug group-hover:text-primary transition-colors">Cluster of 14 stone crushing units brought into complete CTO compliance</h3>
+                <p class="mt-1 text-xs text-slate-500">Dust containment design and ambient PM10/PM2.5 monitoring.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== APPROACH =============================== -->
+    <section id="approach" class="relative py-20 md:py-28 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 contour"></div>
+      <div class="relative max-w-site mx-auto px-4 lg:px-6">
+        <div class="grid lg:grid-cols-12 gap-8 items-end reveal">
+          <div class="lg:col-span-7">
+            <p class="eyebrow eyebrow-light">Our Approach</p>
+            <h2 class="h2-xl mt-5 !text-white">One accountable team, five disciplined stages.</h2>
+          </div>
+          <p class="lg:col-span-5 text-[16px] sm:text-[17px] leading-relaxed text-white/80">A single senior engagement lead owns your approval from the very first site visit through to the day consent is issued, and continues tracking statutory conditions after.</p>
+        </div>
+
+        <ol class="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-8 lg:gap-x-0">
+          <li class="reveal relative lg:pr-8">
+            <div class="flex items-center gap-4"><span class="w-12 h-12 shrink-0 border border-secondary text-secondary grid place-items-center font-bold text-lg">01</span><span class="hidden lg:block flex-1 h-px bg-white/25"></span></div>
+            <h3 class="mt-6 text-xl font-semibold !text-white">Scoping</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Category, board requirements and full approval roadmap confirmed in the initial briefing.</p>
+          </li>
+          <li class="reveal relative lg:pr-8">
+            <div class="flex items-center gap-4"><span class="w-12 h-12 shrink-0 border border-secondary text-secondary grid place-items-center font-bold text-lg">02</span><span class="hidden lg:block flex-1 h-px bg-white/25"></span></div>
+            <h3 class="mt-6 text-xl font-semibold !text-white">Field Study</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Site geology, groundwater resistivity and baseline lab sampling by our own deployed teams.</p>
+          </li>
+          <li class="reveal relative lg:pr-8">
+            <div class="flex items-center gap-4"><span class="w-12 h-12 shrink-0 border border-secondary text-secondary grid place-items-center font-bold text-lg">03</span><span class="hidden lg:block flex-1 h-px bg-white/25"></span></div>
+            <h3 class="mt-6 text-xl font-semibold !text-white">Filing</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Technical reports, engineering drawings and portal submission with calculated statutory fees.</p>
+          </li>
+          <li class="reveal relative lg:pr-8">
+            <div class="flex items-center gap-4"><span class="w-12 h-12 shrink-0 border border-secondary text-secondary grid place-items-center font-bold text-lg">04</span><span class="hidden lg:block flex-1 h-px bg-white/25"></span></div>
+            <h3 class="mt-6 text-xl font-semibold !text-white">Inspection</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">We attend board inspection meetings and resolve technical queries on official record.</p>
+          </li>
+          <li class="reveal relative">
+            <div class="flex items-center gap-4"><span class="w-12 h-12 shrink-0 bg-secondary text-primary-950 grid place-items-center font-bold text-lg">05</span></div>
+            <h3 class="mt-6 text-xl font-semibold !text-white">Consent &amp; Care</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Consent issued, conditions tracked, and upcoming renewals flagged months ahead.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =============================== REGULATORY BRIEF =============================== -->
+    <section id="regulatory" class="py-20 md:py-28">
+      <div class="max-w-site mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4 reveal">
+          <p class="eyebrow">Regulatory Brief</p>
+          <h2 class="h2-xl mt-5">CTE or CTO? Know what your project needs.</h2>
+          <p class="mt-5 text-[16px] sm:text-[17px] leading-relaxed">Under the Water Act (1974) and Air Act (1981), State Pollution Control Boards grant consent in two distinct stages. Your project pollution category determines application stringency.</p>
+        </div>
+
+        <div class="lg:col-span-8 min-w-0 reveal">
+          <div class="flex gap-8 border-b border-line overflow-x-auto no-scrollbar" role="tablist">
+            <button type="button" class="tab-btn is-active shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-compare">CTE vs CTO</button>
+            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-cat">Categories (Red/Orange/Green)</button>
+            <button type="button" class="tab-btn shrink-0 pb-4 -mb-px border-b-2 border-transparent text-[15px] font-semibold text-slate-400" data-tab="tab-docs">Documents Required</button>
+          </div>
+
+          <!-- Tab 1: Comparison Table -->
+          <div id="tab-compare" class="tab-panel is-active pt-8">
+            <div class="overflow-x-auto no-scrollbar">
+              <table class="w-full min-w-[560px] text-left text-[15px]">
+                <thead>
+                  <tr class="border-b-2 border-heading text-heading">
+                    <th class="py-4 pr-4 font-semibold w-1/4">Parameter</th>
+                    <th class="py-4 pr-4 font-semibold">Consent to Establish (CTE)</th>
+                    <th class="py-4 font-semibold">Consent to Operate (CTO)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-line">
+                  <tr><td class="py-4 pr-4 font-semibold text-heading">When Required</td><td class="py-4 pr-4">Prior to any site construction or plant expansion</td><td class="py-4">Post construction, before commencing operations</td></tr>
+                  <tr><td class="py-4 pr-4 font-semibold text-heading">Board Scrutiny</td><td class="py-4 pr-4">Site suitability, layout and proposed control design</td><td class="py-4">Installed systems and physical lab test reports</td></tr>
+                  <tr><td class="py-4 pr-4 font-semibold text-heading">Typical Timeline</td><td class="py-4 pr-4">30 to 60 working days</td><td class="py-4">30 to 45 working days</td></tr>
+                  <tr><td class="py-4 pr-4 font-semibold text-heading">Validity Period</td><td class="py-4 pr-4">Until project completion or period fixed by board</td><td class="py-4">1 to 5 years depending on category, renewable</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-xs text-slate-400">Timelines and statutory fees vary by specific state pollution board guidelines.</p>
+          </div>
+
+          <!-- Tab 2: Categories -->
+          <div id="tab-cat" class="tab-panel pt-8">
+            <div class="grid sm:grid-cols-2 gap-px bg-line border border-line">
+              <div class="bg-white p-6">
+                <div class="flex items-center gap-3"><span class="w-3.5 h-3.5 bg-red-600 shrink-0"></span><p class="font-semibold text-heading">Red Category (Score &ge; 60)</p></div>
+                <p class="mt-2 text-sm text-slate-600">Heavy industrial impact. Chemical, distillery, dyeing, pharmaceuticals, electroplating. Strictest board inspection.</p>
+              </div>
+              <div class="bg-white p-6">
+                <div class="flex items-center gap-3"><span class="w-3.5 h-3.5 bg-amber-500 shrink-0"></span><p class="font-semibold text-heading">Orange Category (Score 41 - 59)</p></div>
+                <p class="mt-2 text-sm text-slate-600">Moderate impact. Stone crushers, food manufacturing, printing, hotel resorts, large commercial buildings.</p>
+              </div>
+              <div class="bg-white p-6">
+                <div class="flex items-center gap-3"><span class="w-3.5 h-3.5 bg-emerald-600 shrink-0"></span><p class="font-semibold text-heading">Green Category (Score 21 - 40)</p></div>
+                <p class="mt-2 text-sm text-slate-600">Low impact. Apparel fabrication, flour mills, light engineering, warehousing. Streamlined clearances.</p>
+              </div>
+              <div class="bg-white p-6">
+                <div class="flex items-center gap-3"><span class="w-3.5 h-3.5 bg-slate-200 ring-1 ring-slate-400 shrink-0"></span><p class="font-semibold text-heading">White Category (Score &le; 20)</p></div>
+                <p class="mt-2 text-sm text-slate-600">Practically non-polluting. Solar power parks, wind farms, handlooms. Typically exempt from NOC upon intimation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Documents Required -->
+          <div id="tab-docs" class="tab-panel pt-8">
+            <div class="grid md:grid-cols-2 gap-10">
+              <div>
+                <p class="text-xs font-bold tracking-[2px] uppercase text-primary">Required for CTE</p>
+                <ul class="mt-4 space-y-3 text-[15px]">
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Comprehensive Detailed Project Report (DPR)</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Scaled site layout and geo-tagged location map</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Land possession, RIICO allotment or registered lease</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Proposed pollution control schematics (ETP / STP / APCM)</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-xs font-bold tracking-[2px] uppercase text-primary">Required for CTO</p>
+                <ul class="mt-4 space-y-3 text-[15px]">
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Copy of valid CTE letter &amp; pointwise compliance report</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Accredited lab test reports of stack emissions and effluent</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Hazardous waste storage &amp; disposal agreement</li>
+                  <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 bg-secondary shrink-0"></span>Factory electricity bills and production capacity records</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== ACCREDITATIONS =============================== -->
+    <section id="credentials" class="border-y border-line bg-slate-50">
+      <div class="max-w-site mx-auto px-4 lg:px-6 py-12 grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-3">
+          <p class="text-sm font-bold text-heading uppercase tracking-wider">Accreditations &amp; Standards</p>
+          <p class="mt-1 text-xs text-slate-500">Recognised laboratory parameters and regulatory compliance frameworks.</p>
+        </div>
+        <div class="lg:col-span-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-line border border-line">
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-lg font-extrabold tracking-tight text-slate-600">NABL</span></div>
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-lg font-extrabold tracking-tight text-slate-600">MoEF&amp;CC</span></div>
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-lg font-extrabold tracking-tight text-slate-600">QCI-NABET</span></div>
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-base font-extrabold tracking-tight text-slate-600">ISO 9001</span></div>
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-base font-extrabold tracking-tight text-slate-600">ISO 14001</span></div>
+          <div class="bg-white h-20 grid place-items-center text-center px-2"><span class="text-base font-extrabold tracking-tight text-slate-600">ISO 45001</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CLIENT TESTIMONIALS =============================== -->
+    <section id="voices" class="py-20 md:py-28">
+      <div class="max-w-site mx-auto px-4 lg:px-6 grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3 reveal">
+          <p class="eyebrow">Client Voices</p>
+          <div class="mt-8 flex items-center gap-4">
+            <button type="button" id="qPrev" class="w-12 h-12 border border-line grid place-items-center text-heading hover:bg-heading hover:text-white transition" aria-label="Previous testimonial">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button type="button" id="qNext" class="w-12 h-12 bg-heading text-white grid place-items-center hover:bg-primary transition" aria-label="Next testimonial">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="text-sm font-semibold text-heading"><span id="qIdx">01</span> <span class="text-slate-400">/ 03</span></p>
+          </div>
+        </div>
+        <div class="lg:col-span-9 reveal">
+          <svg class="w-14 h-14 text-secondary" fill="currentColor" viewBox="0 0 48 48"><path d="M12 36c-4 0-7-3-7-8 0-9 6-16 14-19l2 3c-5 2-8 6-8 10h1c4 0 7 3 7 7s-4 7-9 7zm22 0c-4 0-7-3-7-8 0-9 6-16 14-19l2 3c-5 2-8 6-8 10h1c4 0 7 3 7 7s-4 7-9 7z"/></svg>
+          <div class="mt-6">
+            <figure class="quote-slide is-active">
+              <blockquote class="text-xl sm:text-2xl md:text-4xl font-medium leading-snug tracking-tight text-heading">"Our plant expansion had been held up after two prior rejections. Aravalli reconstructed the technical dossier from the ground up, backed by their own hydrogeology survey, and the board approved it within six weeks."</blockquote>
+              <figcaption class="mt-8 flex items-center gap-4"><span class="w-10 h-px bg-secondary"></span><span><span class="block font-semibold text-heading">Managing Director</span><span class="text-sm text-slate-500">Chemical Manufacturing Unit, Rajasthan</span></span></figcaption>
+            </figure>
+            <figure class="quote-slide">
+              <blockquote class="text-xl sm:text-2xl md:text-4xl font-medium leading-snug tracking-tight text-heading">"One dedicated consultancy handled our commercial complex CTE, groundwater NOC and SEIAA clearance. Single timeline, direct accountability, zero surprises."</blockquote>
+              <figcaption class="mt-8 flex items-center gap-4"><span class="w-10 h-px bg-secondary"></span><span><span class="block font-semibold text-heading">Vice President Projects</span><span class="text-sm text-slate-500">Real Estate Infrastructure Group, NCR</span></span></figcaption>
+            </figure>
+            <figure class="quote-slide">
+              <blockquote class="text-xl sm:text-2xl md:text-4xl font-medium leading-snug tracking-tight text-heading">"Their laboratory turnaround and six-monthly compliance tracking ensure we have operated for years without a single disruption or non-compliance notice."</blockquote>
+              <figcaption class="mt-8 flex items-center gap-4"><span class="w-10 h-px bg-secondary"></span><span><span class="block font-semibold text-heading">Operations Head</span><span class="text-sm text-slate-500">Food &amp; Agro Processing Facility, Gujarat</span></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== FIELD INSIGHTS =============================== -->
+    <section id="insights" class="py-20 md:py-28 bg-slate-50 border-t border-line">
+      <div class="max-w-site mx-auto px-4 lg:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+          <div>
+            <p class="eyebrow">Insights</p>
+            <h2 class="h2-xl mt-5">Perspectives from the field.</h2>
+          </div>
+          <a href="#insights" class="link-arrow inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wide text-primary border-b-2 border-secondary pb-1 self-start md:self-auto">All insights
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-10 md:gap-8">
+          <a href="#contact" class="group reveal block">
+            <div class="zoom-img aspect-[4/3] bg-slate-200"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=70" alt="Compliance documents" class="w-full h-full object-cover" loading="lazy"></div>
+            <p class="mt-6 text-xs font-bold tracking-[2px] uppercase text-slate-400">Regulatory Brief &middot; 6 min read</p>
+            <h3 class="mt-3 text-lg sm:text-xl font-semibold leading-snug group-hover:text-primary transition-colors">Five reasons CTE applications face queries from state boards, and how to prevent them</h3>
+          </a>
+          <a href="#contact" class="group reveal block">
+            <div class="zoom-img aspect-[4/3] bg-slate-200"><img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=70" alt="Groundwater aquifer" class="w-full h-full object-cover" loading="lazy"></div>
+            <p class="mt-6 text-xs font-bold tracking-[2px] uppercase text-slate-400">Hydrogeology &middot; 8 min read</p>
+            <h3 class="mt-3 text-lg sm:text-xl font-semibold leading-snug group-hover:text-primary transition-colors">Operating in an over-exploited groundwater block? What revised CGWA guidelines mean</h3>
+          </a>
+          <a href="#contact" class="group reveal block">
+            <div class="zoom-img aspect-[4/3] bg-slate-200"><img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=70" alt="Industrial stack emissions" class="w-full h-full object-cover" loading="lazy"></div>
+            <p class="mt-6 text-xs font-bold tracking-[2px] uppercase text-slate-400">Compliance &middot; 5 min read</p>
+            <h3 class="mt-3 text-lg sm:text-xl font-semibold leading-snug group-hover:text-primary transition-colors">CTO renewal checklist: why proactive manufacturing units prepare six months before expiry</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== FAQ =============================== -->
+    <section id="faq" class="py-20 md:py-28">
+      <div class="max-w-site mx-auto px-4 lg:px-6 grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4 reveal">
+          <p class="eyebrow">FAQs</p>
+          <h2 class="h2-xl mt-5">Questions industrial clients ask us first.</h2>
+        </div>
+        <div class="lg:col-span-8 reveal border-t border-heading">
+          <div class="faq-item is-open border-b border-line">
+            <button type="button" class="faq-btn w-full flex items-center justify-between gap-6 text-left py-6 text-lg md:text-xl font-semibold text-heading tracking-tight">What is a Pollution NOC and who is legally required to obtain it?<span class="faq-icon shrink-0 text-3xl font-light text-primary leading-none">+</span></button>
+            <div class="faq-body"><div class="overflow-hidden"><p class="pb-6 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl">A Pollution NOC comprises statutory consents granted by the State Pollution Control Board under the Water Act (1974) and Air Act (1981). Any industrial manufacturing facility, mineral processing unit or commercial construction project discharging wastewater, operating boilers/DG sets or emitting air pollutants must obtain Consent to Establish before starting construction, and Consent to Operate before commissioning.</p></div></div>
+          </div>
+          <div class="faq-item border-b border-line">
+            <button type="button" class="faq-btn w-full flex items-center justify-between gap-6 text-left py-6 text-lg md:text-xl font-semibold text-heading tracking-tight">Why does on-site geological expertise matter for an environmental consent?<span class="faq-icon shrink-0 text-3xl font-light text-primary leading-none">+</span></button>
+            <div class="faq-body"><div class="overflow-hidden"><p class="pb-6 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl">Pollution boards strictly scrutinise groundwater withdrawal, aquifer depth, rainwater harvesting shafts and soil capacity to accept treated effluent. When applications are backed by on-site resistivity logs and reports signed by qualified hydrogeologists, the engineering rationale is defensible, eliminating regulatory queries and costly delays.</p></div></div>
+          </div>
+          <div class="faq-item border-b border-line">
+            <button type="button" class="faq-btn w-full flex items-center justify-between gap-6 text-left py-6 text-lg md:text-xl font-semibold text-heading tracking-tight">How long is a Consent to Operate valid, and when should renewal begin?<span class="faq-icon shrink-0 text-3xl font-light text-primary leading-none">+</span></button>
+            <div class="faq-body"><div class="overflow-hidden"><p class="pb-6 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl">Validity ranges from 1 to 5 years depending on whether the unit falls into the Red, Orange or Green category. We recommend initiating renewal testing and documentation 3 to 6 months prior to expiry, ensuring continuous, seamless operations without legal exposure.</p></div></div>
+          </div>
+          <div class="faq-item border-b border-line">
+            <button type="button" class="faq-btn w-full flex items-center justify-between gap-6 text-left py-6 text-lg md:text-xl font-semibold text-heading tracking-tight">How are statutory and professional consultancy fees calculated?<span class="faq-icon shrink-0 text-3xl font-light text-primary leading-none">+</span></button>
+            <div class="faq-body"><div class="overflow-hidden"><p class="pb-6 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl">Government statutory fees are determined strictly by the state board based on your gross capital investment and pollution category. Our consultancy and laboratory fees depend directly on the scope of sampling, surveys and filings required. You receive an itemised, transparent proposal prior to initiation.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CONTACT / RFQ =============================== -->
+    <section id="contact" class="grid lg:grid-cols-12">
+      <!-- Contact Information -->
+      <div class="lg:col-span-5 relative bg-primary-950 text-white px-4 sm:px-8 lg:px-12 xl:px-16 py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 grid-lines"></div>
+        <div class="relative max-w-md">
+          <p class="eyebrow eyebrow-light">Contact</p>
+          <h2 class="h2-xl mt-5 !text-white">Start a conversation.</h2>
+          <p class="mt-5 text-[15px] sm:text-[16px] leading-relaxed text-white/75">Tell us about your plant, expansion or commercial project. A senior environmental consultant will respond within one working day with a clear statutory roadmap and timeline.</p>
+          
+          <dl class="mt-10 space-y-7">
+            <div class="border-t border-white/15 pt-5">
+              <dt class="text-xs font-bold tracking-[2px] uppercase text-secondary">Head Office &amp; Testing Lab</dt>
+              <dd class="mt-2 text-base font-medium">Jaipur, Rajasthan, India</dd>
+            </div>
+            <div class="border-t border-white/15 pt-5">
+              <dt class="text-xs font-bold tracking-[2px] uppercase text-secondary">Regional Hubs Served</dt>
+              <dd class="mt-2 text-sm text-white/80 leading-relaxed">Jaipur (Sitapura, VKIA, Bagru) &middot; Kotputli-Behror (Neemrana, Ghiloth, Bhiwadi) &middot; Across Rajasthan</dd>
+            </div>
+            <div class="border-t border-white/15 pt-5">
+              <dt class="text-xs font-bold tracking-[2px] uppercase text-secondary">Direct Telephone</dt>
+              <dd class="mt-2 text-base font-medium"><a href="tel:+919376590132" class="hover:text-secondary">+91 93765 90132</a></dd>
+            </div>
+            <div class="border-t border-white/15 pt-5">
+              <dt class="text-xs font-bold tracking-[2px] uppercase text-secondary">Official Email</dt>
+              <dd class="mt-2 text-base font-medium break-all"><a href="mailto:aravallienvirolab@gmail.com" class="hover:text-secondary">aravallienvirolab@gmail.com</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Turnkey Enquiry Form -->
+      <form id="contactForm" class="lg:col-span-7 bg-white px-4 sm:px-8 lg:px-12 xl:px-16 py-16 md:py-24 grid sm:grid-cols-2 gap-x-8 gap-y-6 content-start" novalidate>
+        <div>
+          <label for="fName" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Full Name *</label>
+          <input id="fName" type="text" required class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+        </div>
+        <div>
+          <label for="fCompany" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Company / Plant Name</label>
+          <input id="fCompany" type="text" class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+        </div>
+        <div>
+          <label for="fPhone" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Phone Number *</label>
+          <input id="fPhone" type="tel" required class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+        </div>
+        <div>
+          <label for="fEmail" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Email Address</label>
+          <input id="fEmail" type="email" class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+        </div>
+        <div>
+          <label for="fType" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Project Classification</label>
+          <select id="fType" class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+            <option>Industrial Plant / Factory</option>
+            <option>Commercial Real Estate / Mall</option>
+            <option>Hotel / Hospital Resort</option>
+            <option>Mining / Mineral Grinding</option>
+            <option>Infrastructure / RMC</option>
+            <option>Other Facility</option>
+          </select>
+        </div>
+        <div>
+          <label for="fState" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">State / Region</label>
+          <select id="fState" class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent">
+            <option>Rajasthan (Jaipur / Neemrana / Bhiwadi)</option>
+            <option>Delhi NCR</option>
+            <option>Haryana</option>
+            <option>Uttar Pradesh</option>
+            <option>Gujarat</option>
+            <option>Madhya Pradesh</option>
+            <option>Other State</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="fServices" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Services Required</label>
+          <input id="fServices" type="text" placeholder="Add from the scope list or type (e.g., Consent to Establish, Stack Monitoring)" class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading placeholder:text-slate-300 bg-transparent">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="fMsg" class="block text-xs font-bold tracking-[1.5px] uppercase text-heading">Project Scope &amp; Site Details</label>
+          <textarea id="fMsg" rows="3" placeholder="Specify plant capacity, investment or specific board queries..." class="mt-2 w-full py-2.5 border-0 border-b-2 border-line focus:border-primary focus:outline-none text-base text-heading bg-transparent resize-none"></textarea>
+        </div>
+        <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+          <p class="text-xs text-slate-500 max-w-xs">Your technical details remain strictly confidential and are used only to respond with an itemised scope.</p>
+          <button type="submit" class="inline-flex justify-center items-center gap-3 px-8 sm:px-10 h-13 sm:h-14 bg-primary text-white text-sm font-bold uppercase tracking-wide hover:bg-primary-800 transition">
+            Submit Scope Enquiry
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
+      </form>
+    </section>
+  </main>
 
-      </div>
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden xl:hidden border-b border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
-      <a href="#applications" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Applications &amp; Sectors</a>
-      <a href="#testing-lab" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Laboratory Testing (NABL)</a>
-      <a href="#statutory-clearances" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Statutory Clearances (CTE/CTO/NOC)</a>
-      <a href="#equipment-showcase" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Analytical Instrumentation</a>
-      <a href="#industrial-hubs" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Jaipur &amp; Kotputli Industrial Hubs</a>
-      <a href="#technical-library" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Technical Library &amp; Guidelines</a>
-      <a href="#about-us" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">About Aravalli Envirolab</a>
-      <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
-        <a href="#contact" class="mobile-nav-link w-full text-center px-4 py-3 rounded-lg text-sm font-bold text-white bg-ecoBlue">Request Instant Quote</a>
-        <a href="tel:+919376590132" class="w-full text-center px-4 py-2.5 rounded-lg text-sm font-bold text-ecoNavy border border-slate-200 bg-slate-50 flex items-center justify-center gap-2">
-          <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-          Call: +91 93765 90132
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- CINEMATIC VISUAL HERO SECTION (Rich Background Imagery + Interactive Visual Showcase) -->
-  <section id="hero" class="relative overflow-hidden hero-bg-layer text-white py-16 sm:py-20 lg:py-24">
-    <div class="relative max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-        
-        <!-- Left: Punchy Headlines & Actions -->
-        <div class="lg:col-span-7">
-          
-          <!-- Trust Pill -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-emerald-300 mb-5">
-            <span class="w-2 h-2 rounded-full bg-ecoGreen animate-ping"></span>
-            20+ Years Environmental Precision &bull; Geologist-Led Team
-          </div>
-
-          <!-- Bold High-Impact Headline (Outfit Font) -->
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-5 text-white">
-            Precision Environmental Testing &amp; Statutory Approvals.
-          </h1>
-
-          <!-- 2-Sentence Value Proposition -->
-          <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed mb-8 max-w-xl">
-            NABL-grade laboratory analysis and end-to-end statutory clearances (CTE, CTO, CGWA Groundwater NOC) for manufacturing, mining, and infrastructure across Rajasthan.
-          </p>
-
-          <!-- Dual High-Contrast Buttons -->
-          <div class="flex flex-wrap items-center gap-4 mb-10">
-            <a href="#testing-lab" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-ecoGreen hover:bg-ecoGreen-hover shadow-lg shadow-emerald-950/40 transition-all duration-200">
-              Explore Laboratory Testing
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </a>
-            <a href="#statutory-clearances" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm sm:text-base font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all duration-200">
-              Statutory Clearances (CTE/CTO)
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-          </div>
-
-          <!-- 4 Floating Live Metric Cards -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-white/20">
-            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
-              <div class="text-2xl font-extrabold font-display text-white">20+</div>
-              <div class="text-xs text-slate-300 mt-0.5">Years Experience</div>
-            </div>
-            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
-              <div class="text-2xl font-extrabold font-display text-white">5,000+</div>
-              <div class="text-xs text-slate-300 mt-0.5">Samples Tested</div>
-            </div>
-            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
-              <div class="text-2xl font-extrabold font-display text-white">100%</div>
-              <div class="text-xs text-slate-300 mt-0.5">RSPCB Compliance</div>
-            </div>
-            <div class="glass-dark rounded-xl p-3.5 text-center sm:text-left">
-              <div class="text-2xl font-extrabold font-display text-white">2 Centers</div>
-              <div class="text-xs text-slate-300 mt-0.5">Jaipur &bull; Kotputli</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Visual Photographic Showcase Card (Eliminates the empty text feel!) -->
-        <div class="lg:col-span-5 hidden sm:block perspective-container">
-          <div class="tilt-card relative rounded-2xl overflow-hidden shadow-2xl border border-white/25 bg-white/10 backdrop-blur-xl p-4">
-            
-            <!-- High-Res Analytical Lab Photo -->
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=80" alt="Environmental Testing Chemist" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/90 via-transparent to-transparent"></div>
-              
-              <!-- Floating Live Instrumentation Badges -->
-              <div class="absolute bottom-4 left-4 right-4">
-                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300 px-2.5 py-1 rounded bg-ecoNavy/80 backdrop-blur-sm border border-white/10">
-                  NABL ISO/IEC 17025 Standards
-                </span>
-                <h3 class="text-base font-bold font-display text-white mt-1.5">
-                  State-of-the-Art Analytical Lab
-                </h3>
-                <p class="text-xs text-slate-300">
-                  Precision testing for water, stack emissions, soil &amp; ambient air.
-                </p>
-              </div>
-            </div>
-
-            <!-- 2 Interactive Highlight Strips -->
-            <div class="mt-3.5 grid grid-cols-2 gap-2 text-xs">
-              <div class="rounded-lg bg-white/10 border border-white/15 p-2.5 text-white flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-ecoGreen shrink-0"></span>
-                <span>Water &bull; BOD / COD / TDS</span>
-              </div>
-              <div class="rounded-lg bg-white/10 border border-white/15 p-2.5 text-white flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sky-400 shrink-0"></span>
-                <span>Stack &bull; PM / SOx / NOx</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ACCREDITATION & STATUTORY TRUST BAR -->
-  <section class="border-y border-slate-200 bg-white py-6">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap items-center justify-between gap-6 text-xs text-slate-500 font-semibold uppercase tracking-wider">
-        <span class="text-ecoNavy font-bold">Standard Accreditations &amp; Guidelines:</span>
-        <div class="flex flex-wrap items-center gap-6 sm:gap-10">
-          <span class="inline-flex items-center gap-2 text-slate-700">
-            <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            NABL ISO/IEC 17025 Parameters
-          </span>
-          <span class="inline-flex items-center gap-2 text-slate-700">
-            <svg class="w-4 h-4 text-ecoBlue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            RSPCB Approved Consultants
-          </span>
-          <span class="inline-flex items-center gap-2 text-slate-700">
-            <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            CGWA Ground Water Rules
-          </span>
-          <span class="inline-flex items-center gap-2 text-slate-700">
-            <svg class="w-4 h-4 text-ecoBlue" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            MoEF&amp;CC EPA Standards
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TWO CORE OPERATIONAL WINGS WITH RICH REAL PHOTOGRAPHY -->
-  <section class="py-16 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold tracking-widest uppercase text-ecoBlue">Operational Wings</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-          Two Unified Disciplines Under One Roof
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2">
-          We combine accredited scientific laboratory testing with complete government statutory compliance.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 perspective-container">
-        
-        <!-- Pillar A: Testing Laboratory (with large real image!) -->
-        <div class="tilt-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="relative h-56 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=800&q=80" alt="Environmental Testing Lab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute top-4 left-4 text-xs font-bold text-white bg-ecoBlue px-3 py-1 rounded-md shadow-sm">
-              NABL Accredited Wing
-            </span>
-            <div class="absolute bottom-4 left-4 right-4 text-white">
-              <h3 class="text-xl font-bold font-display">Testing Laboratory Services</h3>
-              <p class="text-xs text-slate-200">ISO/IEC 17025 standard parameters</p>
-            </div>
-          </div>
-
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Water &amp; Effluent:</strong> BOD, COD, TDS, TSS, Heavy Metals</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Air &amp; DG Stack:</strong> PM10, PM2.5, SO2, NOx, CO, Flue Gas</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoGreen shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Noise &amp; Soil:</strong> Type-1 SLM day/night dB(A), DG acoustic audits</span>
-              </li>
-            </ul>
-
-            <a href="#testing-lab" class="inline-flex items-center text-sm font-bold text-ecoBlue hover:text-ecoBlue-hover group-hover:translate-x-1 transition-all">
-              View Complete Parameter Matrix &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- Pillar B: Statutory Consultancy (with large real image!) -->
-        <div class="tilt-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-          <div class="relative h-56 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80" alt="Industrial Clearances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute top-4 left-4 text-xs font-bold text-white bg-ecoGreen px-3 py-1 rounded-md shadow-sm">
-              Turnkey Approvals
-            </span>
-            <div class="absolute bottom-4 left-4 right-4 text-white">
-              <h3 class="text-xl font-bold font-display">Statutory Clearances (CTE / CTO)</h3>
-              <p class="text-xs text-slate-200">RSPCB, CGWA, and SEIAA liaison</p>
-            </div>
-          </div>
-
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Pollution Board NOCs:</strong> Consent to Establish (CTE) &amp; Consent to Operate (CTO)</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Ground Water NOC:</strong> CGWA NOC, Piezometer installation, Hydrogeology</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-ecoBlue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span><strong>Annual Audits:</strong> Form-V Environmental Statements &amp; Haz-Waste Rules</span>
-              </li>
-            </ul>
-
-            <a href="#statutory-clearances" class="inline-flex items-center text-sm font-bold text-ecoGreen hover:text-ecoGreen-hover group-hover:translate-x-1 transition-all">
-              Explore Clearances &amp; Approvals &rarr;
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- APPLICATIONS & SECTORS (Visual Cards with Rich Photos like eco2tech) -->
-  <section id="applications" class="py-20 bg-white">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs font-bold tracking-widest uppercase text-ecoBlue">Portfolio Applications</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-            Targeted Environmental Solutions
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
-            Custom testing suites and regulatory compliance workflows tailored for critical industrial operations.
-          </p>
-        </div>
-        <div class="mt-4 md:mt-0">
-          <a href="#contact" class="inline-flex items-center text-sm font-bold text-ecoBlue hover:text-ecoNavy">
-            Request Sector Scope
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 6 High-Impact Visual Cards with Real Photography -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- App 1: Effluent & Wastewater -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=700&q=75" alt="Industrial Effluent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoBlue/90 px-2.5 py-1 rounded-md">
-              Effluent &amp; Sewage
+  <!-- =============================== FOOTER =============================== -->
+  <footer class="bg-primary-950 text-white/70 border-t border-white/10">
+    <div class="max-w-site mx-auto px-4 lg:px-6 pt-16 pb-10">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Aravalli Envirolab Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+            <span class="leading-none">
+              <span class="block text-xl font-extrabold tracking-tight text-white">ARAVALLI</span>
+              <span class="block mt-1 text-[10px] font-semibold tracking-[1.8px] uppercase text-white/60">Envirolab &amp; Consultancy Services</span>
             </span>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                Industrial Effluent &amp; ETP/STP Testing
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Full-spectrum analysis for industrial trade effluents to guarantee compliance with RSPCB discharge limits and zero liquid discharge (ZLD).
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">BOD / COD</span>
-                <span class="param-tag bg-slate-100 text-slate-700">TDS / TSS</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Heavy Metals</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Oil &amp; Grease</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              Book Effluent Sample &rarr;
-            </a>
-          </div>
+          <p class="mt-5 text-sm leading-relaxed max-w-sm">Geologist-led environmental consultancy and accredited testing laboratory for industrial manufacturing and infrastructure development across India.</p>
+          <form id="newsForm" class="mt-6 flex border-b border-white/30 max-w-sm">
+            <label for="newsEmail" class="sr-only">Email</label>
+            <input id="newsEmail" type="email" placeholder="Subscribe to regulatory briefs" class="flex-1 min-w-0 bg-transparent py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none">
+            <button type="submit" class="px-2 text-secondary" aria-label="Subscribe"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </form>
         </div>
-
-        <!-- App 2: Stack Emission -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=700&q=75" alt="Stack Emissions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoNavy/90 px-2.5 py-1 rounded-md">
-              Stack &amp; Air
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                Boiler &amp; DG Set Stack Emissions
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Isokinetic stack sampling and flue gas analysis for industrial boilers, furnaces, and diesel generators under CPCB air pollution guidelines.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">Particulate (PM)</span>
-                <span class="param-tag bg-slate-100 text-slate-700">SOx &bull; NOx</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Carbon Monoxide</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Gas Velocity</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              Schedule Stack Audit &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- App 3: CGWA Groundwater NOC -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=700&q=75" alt="Groundwater Survey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoGreen/90 px-2.5 py-1 rounded-md">
-              Ground Water NOC
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                CGWA Groundwater NOC &amp; Surveys
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Comprehensive hydrogeological survey reports, impact assessments, rainwater harvesting designs, and digital piezometer calibrations.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">Hydrogeology Report</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Piezometer Setup</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Telemetry Loggers</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Recharge Audit</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              Apply for CGWA NOC &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- App 4: Ambient Air Quality -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=75" alt="Ambient Air Monitoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoNavy/90 px-2.5 py-1 rounded-md">
-              Ambient Air
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                Ambient Air Quality Monitoring (AAQM)
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                24-hour statutory ambient monitoring at industrial plant boundaries, mining leases, and stone crusher clusters for pollution compliance.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">PM10 / PM2.5</span>
-                <span class="param-tag bg-slate-100 text-slate-700">SO2 &bull; NO2</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Ammonia (NH3)</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Micro-Meteorology</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              Request AAQM Sampler &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- App 5: CTE & CTO Clearances -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=75" alt="Statutory Clearances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoBlue/90 px-2.5 py-1 rounded-md">
-              RSPCB Liaison
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                Pollution Board CTE &amp; CTO Clearances
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Full documentation, site inspections, and online filing on the RPCB portal for red, orange, and green category industrial enterprises.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">Consent to Establish</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Consent to Operate</span>
-                <span class="param-tag bg-slate-100 text-slate-700">CTO Renewal</span>
-                <span class="param-tag bg-slate-100 text-slate-700">EPR Authorization</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              File Consent Application &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- App 6: Workplace Noise & Lux -->
-        <div class="group rounded-2xl border border-slate-200 overflow-hidden bg-white hover:border-ecoBlue hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="relative h-52 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75" alt="Industrial Noise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-white bg-ecoGreen/90 px-2.5 py-1 rounded-md">
-              Workplace Safety
-            </span>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-bold font-display text-ecoNavy mb-2 group-hover:text-ecoBlue transition-colors">
-                Workplace Noise &amp; Factory Lux Surveys
-              </h3>
-              <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-                Precision Type-1 calibrated sound level measurements for machinery enclosures, factory floors, DG sets, and environmental illumination audits.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6">
-                <span class="param-tag bg-slate-100 text-slate-700">Day/Night dB(A)</span>
-                <span class="param-tag bg-slate-100 text-slate-700">DG Acoustic Audit</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Factory Act Lux</span>
-                <span class="param-tag bg-slate-100 text-slate-700">Occupational Health</span>
-              </div>
-            </div>
-            <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-              Schedule Noise Survey &rarr;
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EQUIPMENT & INSTRUMENTATION VISUAL SHOWCASE (Modeled after eco2tech's Speece Cone Components) -->
-  <section id="equipment-showcase" class="py-20 bg-slate-900 text-white">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold tracking-widest uppercase text-emerald-400">Precision Infrastructure</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2">
-          Calibrated Analytical Equipment
-        </h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-2">
-          NABL ISO/IEC 17025 compliant instrumentation ensuring legally defensible data for courts and regulatory authorities.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Equipment 1 -->
-        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
-          <div class="relative h-44 overflow-hidden bg-slate-950">
-            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=600&q=80" alt="Spectrophotometer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoNavy/90 px-2 py-0.5 rounded">Analytical</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h4 class="font-bold font-display text-base text-white mb-1">Double Beam Spectrophotometer</h4>
-              <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                UV-Vis analysis for trace heavy metals, COD, sulfates, fluorides, and cyanides in trade effluents.
-              </p>
-            </div>
-            <div class="text-[11px] font-semibold text-emerald-400">NABL Calibrated &check;</div>
-          </div>
-        </div>
-
-        <!-- Equipment 2 -->
-        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
-          <div class="relative h-44 overflow-hidden bg-slate-950">
-            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80" alt="Stack Sampler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoBlue px-2 py-0.5 rounded">Emissions</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h4 class="font-bold font-display text-base text-white mb-1">Isokinetic Stack Monitoring Kit</h4>
-              <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                Calibrated Pitot tubes, digital manometer, and heated thimble for boiler &amp; DG flue particulate.
-              </p>
-            </div>
-            <div class="text-[11px] font-semibold text-sky-400">IS 11255 Compliant &check;</div>
-          </div>
-        </div>
-
-        <!-- Equipment 3 -->
-        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
-          <div class="relative h-44 overflow-hidden bg-slate-950">
-            <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Air Sampler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-ecoGreen px-2 py-0.5 rounded">Air Quality</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h4 class="font-bold font-display text-base text-white mb-1">High-Volume Ambient Air Sampler</h4>
-              <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                PM10 &amp; PM2.5 dual-channel dust samplers with thermoelectrically cooled gas impingers for SO2 &amp; NOx.
-              </p>
-            </div>
-            <div class="text-[11px] font-semibold text-emerald-400">NAAQS Standards &check;</div>
-          </div>
-        </div>
-
-        <!-- Equipment 4 -->
-        <div class="rounded-xl overflow-hidden bg-slate-800/80 border border-slate-700/80 group flex flex-col justify-between">
-          <div class="relative h-44 overflow-hidden bg-slate-950">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Field Metrology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded">Groundwater</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h4 class="font-bold font-display text-base text-white mb-1">Digital Piezometer &amp; SLM Meter</h4>
-              <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                Type-1 sound level meters with octave filter sets &amp; hydrostatic groundwater telemetry pressure transducers.
-              </p>
-            </div>
-            <div class="text-[11px] font-semibold text-indigo-400">CGWA Telemetry Ready &check;</div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INDUSTRIAL HUBS: JAIPUR & KOTPUTLI-BEHROR WITH VISUAL PHOTOGRAPHY -->
-  <section id="industrial-hubs" class="py-20 bg-slate-50 border-y border-slate-200">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold tracking-widest uppercase text-ecoNavy">Regional Coverage</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-          Industrial Presence Across Rajasthan
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Daily on-site sample collection and dedicated statutory liaison officers across premier RIICO and industrial clusters.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Jaipur Hub Card (with real visual photography!) -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
-          <div class="relative h-44 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75" alt="Jaipur Industrial Hub" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
-              <h3 class="text-xl font-bold font-display flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-ecoBlue"></span>
-                Jaipur Industrial District
-              </h3>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-sky-500/90">Same-Day Sampling</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="text-xs text-slate-500 mb-4">
-                Supporting over 350+ manufacturing, textile, engineering, and institutional units in Jaipur:
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Sitapura Industrial Area</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Vishwakarma (VKIA)</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bagru RIICO Phase I &amp; II</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Mansarovar Industrial Zone</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bindayaka &amp; Jhotwara</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bassi &amp; Kanakpura</span>
-              </div>
-            </div>
-            <div class="text-xs text-slate-500 flex items-center gap-2 pt-3 border-t border-slate-100">
-              <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-              Jaipur Central Lab &amp; Liaison Office
-            </div>
-          </div>
-        </div>
-
-        <!-- Kotputli-Behror Hub Card (with real visual photography!) -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col">
-          <div class="relative h-44 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=75" alt="Kotputli Behror Belt" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-ecoNavy/85 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
-              <h3 class="text-xl font-bold font-display flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-ecoGreen"></span>
-                Kotputli-Behror &amp; NCR Belt
-              </h3>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/90">Heavy Industry Hub</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="text-xs text-slate-500 mb-4">
-                Comprehensive stack monitoring, groundwater surveys, and CTE/CTO sanctions for major industrial belts:
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Kotputli RIICO</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Behror Industrial Area</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Neemrana Japanese Zone</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Ghiloth Industrial Park</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Shahjahanpur &amp; Sotanala</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold">Bhiwadi &amp; Khushkhera Corridor</span>
-              </div>
-            </div>
-            <div class="text-xs text-slate-500 flex items-center gap-2 pt-3 border-t border-slate-100">
-              <svg class="w-4 h-4 text-ecoGreen" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-              Kotputli-Behror Field Operations Team
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TECHNICAL LIBRARY / DOWNLOADABLE COMPLIANCE BRIEFS (Exact feature from eco2tech!) -->
-  <section id="technical-library" class="py-20 bg-white">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs font-bold tracking-widest uppercase text-ecoBlue">Technical Library</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2">
-            Regulatory Guides &amp; Checklists
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
-            Download current statutory guidelines, document checklists, and environmental testing limit sheets.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Doc 1 -->
-        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-ecoBlue hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
           <div>
-            <div class="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold text-xs mb-4">
-              PDF
-            </div>
-            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">RSPCB CTE/CTO Checklist</h4>
-            <p class="text-xs text-slate-500 mb-4">Mandatory papers, land documents, and project report templates.</p>
-          </div>
-          <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-            Request Document &rarr;
-          </a>
-        </div>
-
-        <!-- Doc 2 -->
-        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-ecoBlue hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-sky-50 text-ecoBlue flex items-center justify-center font-bold text-xs mb-4">
-              PDF
-            </div>
-            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">CGWA Groundwater Rules</h4>
-            <p class="text-xs text-slate-500 mb-4">Telemetry water meter specifications and piezometer depth norms.</p>
-          </div>
-          <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-            Request Document &rarr;
-          </a>
-        </div>
-
-        <!-- Doc 3 -->
-        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-ecoBlue hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-ecoGreen flex items-center justify-center font-bold text-xs mb-4">
-              PDF
-            </div>
-            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">Effluent Discharge Limits</h4>
-            <p class="text-xs text-slate-500 mb-4">Standard CPCB/RSPCB limits for inland surface, sewer, and irrigation.</p>
-          </div>
-          <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-            Request Document &rarr;
-          </a>
-        </div>
-
-        <!-- Doc 4 -->
-        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-ecoBlue hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs mb-4">
-              PDF
-            </div>
-            <h4 class="font-bold font-display text-sm text-ecoNavy mb-1">Boiler Stack Emission Norms</h4>
-            <p class="text-xs text-slate-500 mb-4">Fuel-based stack height formulas and permissible particulate levels.</p>
-          </div>
-          <a href="#contact" class="text-xs font-bold text-ecoBlue hover:text-ecoNavy flex items-center gap-1">
-            Request Document &rarr;
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT US / LEADERSHIP SECTION (with 2-Image Mosaic Grid) -->
-  <section id="about-us" class="py-20 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6">
-          <span class="text-xs font-bold tracking-widest uppercase text-ecoNavy">Established 2004</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-ecoNavy mt-2 mb-6">
-            Two Decades of Environmental Leadership in Rajasthan
-          </h2>
-          <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
-            <p>
-              Founded in 2004, <strong>Aravalli Envirolab &amp; Consultancy Services</strong> has grown from an analytical testing facility into Rajasthan’s foremost integrated environmental engineering consultancy.
-            </p>
-            <p>
-              Headed by seasoned environmental geologists and certified analytical chemists, we deliver legally airtight solutions for over 500+ industrial enterprises across Jaipur, Kotputli, Behror, Neemrana, and Bhiwadi.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-200">
-            <div>
-              <div class="text-xl font-bold text-ecoNavy font-display">Geologist-Led</div>
-              <div class="text-xs text-slate-500 mt-1">Groundwater, soil &amp; hydrogeological excellence</div>
-            </div>
-            <div>
-              <div class="text-xl font-bold text-ecoBlue font-display">24-Hr Response</div>
-              <div class="text-xs text-slate-500 mt-1">On-site industrial sampling &amp; audits</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-          <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=800&q=75" alt="Analytical Lab Chemist" class="w-full h-full object-cover">
-          </div>
-          <div class="rounded-2xl overflow-hidden shadow-md aspect-[3/4] bg-slate-200 mt-6">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=75" alt="Field Survey Team" class="w-full h-full object-cover">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE QUOTE & LIAISON REQUEST FORM -->
-  <section id="contact" class="py-20 bg-ecoNavy text-white relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-20">
-      <div class="absolute top-1/2 left-1/4 w-96 h-96 rounded-full bg-ecoBlue filter blur-3xl"></div>
-    </div>
-
-    <div class="relative max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- Left: Direct Contact Information -->
-        <div class="lg:col-span-5 flex flex-col justify-between">
-          <div>
-            <span class="text-xs font-bold tracking-widest uppercase text-emerald-400">Direct Support</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2 mb-4">
-              Get an Immediate Scope &amp; Quote
-            </h2>
-            <p class="text-slate-300 text-sm mb-8 leading-relaxed">
-              Connect directly with our senior environmental scientists for same-day quotations, testing parameters, and statutory guidance.
-            </p>
-
-            <div class="space-y-6 text-sm">
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 text-ecoGreen">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Phone</div>
-                  <a href="tel:+919376590132" class="text-base font-bold text-white hover:text-emerald-300 transition-colors">+91 93765 90132</a>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 text-sky-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Official Email</div>
-                  <a href="mailto:aravallienvirolab@gmail.com" class="text-base font-bold text-white hover:text-sky-300 transition-colors">aravallienvirolab@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 text-emerald-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Operational Offices</div>
-                  <div class="text-white font-medium">Jaipur &bull; Kotputli-Behror, Rajasthan</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick WhatsApp Link -->
-          <div class="mt-8 pt-6 border-t border-white/15">
-            <a href="https://wa.me/919376590132?text=Hello%20Aravalli%20Envirolab,%20I%20would%20like%20to%20inquire%20about%20environmental%20testing%20and%20statutory%20clearance." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-lg text-sm font-bold text-white bg-[#25D366] hover:bg-[#20ba59] transition-colors shadow-md">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"></path></svg>
-              Chat on WhatsApp Now
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Modern Clean RFQ Form -->
-        <div class="lg:col-span-7">
-          <div class="bg-white rounded-2xl p-6 sm:p-8 text-slate-800 shadow-2xl">
-            <h3 class="text-xl font-bold font-display text-ecoNavy mb-1">Request Service Scope &amp; Quote</h3>
-            <p class="text-xs text-slate-500 mb-6">Fill out this quick form for same-day response from our technical team.</p>
-
-            <form id="quoteForm" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your request has been received. Our senior consultant will contact you within 2 working hours.'); this.reset();">
-              
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-                  <input type="text" required placeholder="e.g. Rajesh Sharma" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-ecoBlue focus:outline-none">
-                </div>
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number *</label>
-                  <input type="tel" required placeholder="e.g. +91 98765 43210" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-ecoBlue focus:outline-none">
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Required *</label>
-                  <select required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-ecoBlue focus:outline-none">
-                    <option value="" disabled selected>Select Service...</option>
-                    <option value="effluent">Effluent &amp; Wastewater Testing</option>
-                    <option value="stack">Stack Emission &amp; DG Testing</option>
-                    <option value="air">Ambient Air Quality Monitoring</option>
-                    <option value="cte_cto">RSPCB Consent to Establish (CTE)</option>
-                    <option value="cto_renewal">RSPCB Consent to Operate (CTO)</option>
-                    <option value="cgwa">CGWA Ground Water NOC</option>
-                    <option value="audit">Complete Environmental Audit</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Industrial Area / Location *</label>
-                  <select required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-ecoBlue focus:outline-none">
-                    <option value="" disabled selected>Select Industrial Hub...</option>
-                    <option value="sitapura">Sitapura Industrial Area, Jaipur</option>
-                    <option value="vkia">Vishwakarma (VKIA), Jaipur</option>
-                    <option value="bagru">Bagru RIICO, Jaipur</option>
-                    <option value="neemrana">Neemrana Japanese Zone</option>
-                    <option value="kotputli">Kotputli Industrial Area</option>
-                    <option value="behror">Behror Industrial Area</option>
-                    <option value="ghiloth">Ghiloth Industrial Park</option>
-                    <option value="bhiwadi">Bhiwadi &amp; NCR Belt</option>
-                    <option value="other">Other Location in Rajasthan</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project / Plant Description</label>
-                <textarea rows="3" placeholder="Briefly describe your industrial activity, number of stacks, or specific clearance requirements..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-ecoBlue focus:outline-none"></textarea>
-              </div>
-
-              <button type="submit" class="w-full py-3.5 px-6 rounded-lg text-sm font-bold text-white bg-ecoBlue hover:bg-ecoBlue-hover shadow-md transition-all duration-200">
-                Submit Consultation Request &rarr;
-              </button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER (Clean desktop footer with user-requested complete mobile removal) -->
-  <footer class="bg-slate-900 text-slate-400 text-xs">
-    
-    <!-- Desktop-Only Detailed Footer Links (Hidden on mobile per user instruction) -->
-    <div class="mobile-hide-footer border-b border-slate-800 py-12">
-      <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
-          <!-- Col 1 -->
-          <div>
-            <div class="font-display font-bold text-base text-white mb-3">ARAVALLI ENVIROLAB</div>
-            <p class="text-xs text-slate-400 leading-relaxed mb-4">
-              Integrated NABL-grade environmental testing laboratory and statutory environmental consultancy established in 2004.
-            </p>
-            <div class="text-[11px] text-emerald-400 font-semibold">
-              Rajasthan &bull; Jaipur &bull; Kotputli-Behror
-            </div>
-          </div>
-
-          <!-- Col 2 -->
-          <div>
-            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Testing Services</h4>
-            <ul class="space-y-2 text-xs">
-              <li><a href="#testing-lab" class="hover:text-white transition-colors">Effluent &amp; Wastewater Testing</a></li>
-              <li><a href="#testing-lab" class="hover:text-white transition-colors">Stack Emission Monitoring</a></li>
-              <li><a href="#testing-lab" class="hover:text-white transition-colors">Ambient Air Quality (AAQM)</a></li>
-              <li><a href="#testing-lab" class="hover:text-white transition-colors">Noise &amp; Acoustic Audits</a></li>
-              <li><a href="#testing-lab" class="hover:text-white transition-colors">Soil &amp; Hazardous Sludge Testing</a></li>
+            <p class="text-xs font-bold tracking-[2px] uppercase text-white">Approvals</p>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="#capabilities" class="hover:text-secondary">Consent to Establish</a></li>
+              <li><a href="#capabilities" class="hover:text-secondary">Consent to Operate</a></li>
+              <li><a href="#capabilities" class="hover:text-secondary">CTO Renewals</a></li>
+              <li><a href="#capabilities" class="hover:text-secondary">Groundwater NOC</a></li>
+              <li><a href="#capabilities" class="hover:text-secondary">SEIAA Clearance</a></li>
             </ul>
           </div>
-
-          <!-- Col 3 -->
           <div>
-            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Statutory Clearances</h4>
-            <ul class="space-y-2 text-xs">
-              <li><a href="#statutory-clearances" class="hover:text-white transition-colors">RSPCB Consent to Establish (CTE)</a></li>
-              <li><a href="#statutory-clearances" class="hover:text-white transition-colors">RSPCB Consent to Operate (CTO)</a></li>
-              <li><a href="#statutory-clearances" class="hover:text-white transition-colors">CGWA Ground Water NOC</a></li>
-              <li><a href="#statutory-clearances" class="hover:text-white transition-colors">Environmental Statements (Form-V)</a></li>
-              <li><a href="#statutory-clearances" class="hover:text-white transition-colors">Hazardous Waste Authorizations</a></li>
+            <p class="text-xs font-bold tracking-[2px] uppercase text-white">Envirolab</p>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="#envirolab" class="hover:text-secondary">Ambient Air</a></li>
+              <li><a href="#envirolab" class="hover:text-secondary">Boiler &amp; DG Stacks</a></li>
+              <li><a href="#envirolab" class="hover:text-secondary">Water &amp; Effluent</a></li>
+              <li><a href="#envirolab" class="hover:text-secondary">Soil Permeability</a></li>
+              <li><a href="#envirolab" class="hover:text-secondary">Noise Testing</a></li>
             </ul>
           </div>
-
-          <!-- Col 4 -->
           <div>
-            <h4 class="font-bold font-display text-white text-xs uppercase tracking-wider mb-3">Regional Coverage</h4>
-            <ul class="space-y-2 text-xs">
-              <li><span>Sitapura &amp; VKIA, Jaipur</span></li>
-              <li><span>Bagru RIICO Industrial Area</span></li>
-              <li><span>Neemrana Japanese Zone</span></li>
-              <li><span>Kotputli &amp; Behror Industrial Belt</span></li>
-              <li><span>Ghiloth &amp; Shahjahanpur Hub</span></li>
+            <p class="text-xs font-bold tracking-[2px] uppercase text-white">Company</p>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="#about" class="hover:text-secondary">About Aravalli</a></li>
+              <li><a href="#sectors" class="hover:text-secondary">Industrial Sectors</a></li>
+              <li><a href="#projects" class="hover:text-secondary">Case Studies</a></li>
+              <li><a href="#insights" class="hover:text-secondary">Field Insights</a></li>
+              <li><a href="#credentials" class="hover:text-secondary">Accreditations</a></li>
             </ul>
           </div>
-
+          <div>
+            <p class="text-xs font-bold tracking-[2px] uppercase text-white">Direct Connect</p>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="tel:+919376590132" class="hover:text-secondary font-semibold text-white">+91 93765 90132</a></li>
+              <li><a href="mailto:aravallienvirolab@gmail.com" class="hover:text-secondary break-all">aravallienvirolab@gmail.com</a></li>
+              <li><a href="https://wa.me/919376590132?text=Hello%20Aravalli%20Envirolab%2C%20I%20would%20like%20to%20enquire%20about%20environmental%20testing%20and%20clearances." class="hover:text-secondary">WhatsApp Direct</a></li>
+              <li><a href="#contact" class="hover:text-secondary">Jaipur &amp; Neemrana</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Minimalist Bottom Bar (Clean on both desktop and mobile) -->
-    <div class="py-6">
-      <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-        <p class="text-slate-400 text-xs">
-          &copy; 2004&ndash;2026 Aravalli Envirolab &amp; Consultancy Services. All rights reserved.
-        </p>
-        <div class="flex items-center gap-4 text-xs font-medium">
-          <a href="#hero" class="hover:text-white transition-colors">Back to Top &uarr;</a>
-          <span class="text-slate-700">&bull;</span>
-          <a href="tel:+919376590132" class="text-emerald-400 font-bold hover:underline">Direct Helpline: +91 93765 90132</a>
-        </div>
+      <p class="footer-mark mt-16 leading-none font-extrabold tracking-tighter text-white/[0.05] select-none" aria-hidden="true">ARAVALLI</p>
+      <div class="mt-6 pt-6 border-t border-white/10 flex flex-col md:flex-row gap-3 justify-between text-xs text-white/50">
+        <p>&copy; <span id="year"></span> Aravalli Envirolab &amp; Consultancy Services. All rights reserved.</p>
+        <div class="flex gap-6"><a href="#contact" class="hover:text-white">Privacy</a><a href="#contact" class="hover:text-white">Terms</a><a href="#contact" class="hover:text-white">Statutory Disclaimers</a></div>
       </div>
     </div>
-
   </footer>
 
-  <!-- LIGHTWEIGHT JAVASCRIPT -->
+  <!-- WhatsApp Floating Action Button -->
+  <a href="https://wa.me/919376590132?text=Hello%20Aravalli%20Envirolab%2C%20I%20would%20like%20to%20enquire%20about%20environmental%20testing%20and%20clearances." target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-30 w-13 h-13 sm:w-14 sm:h-14 bg-emerald-600 text-white shadow-2xl grid place-items-center hover:bg-emerald-700 transition" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast fixed bottom-5 inset-x-0 mx-auto w-max max-w-[90%] text-center z-[70] px-6 py-3.5 bg-heading text-white text-sm font-semibold shadow-xl"></div>
+
+  <!-- Interactive Logic -->
   <script>
-    // Mobile & Laptop Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    (function () {
+      const body = document.body;
+      const overlay = document.getElementById('overlay');
+      const searchPanel = document.getElementById('searchPanel');
+      const searchInput = document.getElementById('searchInput');
+      const header = document.getElementById('siteHeader');
+      let activeDrawer = null;
 
-    if (mobileMenuToggle && mobileMenu) {
-      mobileMenuToggle.addEventListener('click', () => {
-        const isExpanded = mobileMenu.classList.toggle('hidden');
-        hamburgerIcon.classList.toggle('hidden', !isExpanded);
-        closeIcon.classList.toggle('hidden', isExpanded);
+      /* ---------- Header state on scroll ---------- */
+      const setHeader = () => header.classList.toggle('is-solid', window.scrollY > 40);
+      setHeader();
+      window.addEventListener('scroll', setHeader, { passive: true });
+      document.querySelectorAll('.has-mega').forEach(m => {
+        m.addEventListener('mouseenter', () => header.classList.add('is-hover'));
+        m.addEventListener('mouseleave', () => header.classList.remove('is-hover'));
       });
 
-      mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-        });
-      });
-    }
+      /* ---------- Sliding Drawers ---------- */
+      function openDrawer(id) {
+        closeSearch();
+        activeDrawer = document.getElementById(id);
+        if (activeDrawer) activeDrawer.classList.add('is-open');
+        overlay.classList.add('is-open');
+        body.classList.add('lock');
+      }
+      function closeAll() {
+        if (activeDrawer) activeDrawer.classList.remove('is-open');
+        activeDrawer = null;
+        closeSearch();
+        overlay.classList.remove('is-open');
+        body.classList.remove('lock');
+      }
+      document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openDrawer(b.dataset.open)));
+      document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeAll));
+      overlay.addEventListener('click', closeAll);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+      document.querySelectorAll('.acc-btn').forEach(b => b.addEventListener('click', () => b.closest('.acc').classList.toggle('acc-open')));
 
-    // 3D Tilt Effect on Desktop
-    if (window.matchMedia('(min-width: 1024px)').matches) {
-      document.querySelectorAll('.tilt-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          const rotateX = ((y - centerY) / centerY) * -5;
-          const rotateY = ((x - centerX) / centerX) * 5;
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-        });
+      /* ---------- Search Functionality ---------- */
+      function openSearch() {
+        if (activeDrawer) { activeDrawer.classList.remove('is-open'); activeDrawer = null; }
+        searchPanel.classList.add('is-open');
+        overlay.classList.add('is-open');
+        body.classList.add('lock');
+        setTimeout(() => searchInput.focus(), 350);
+      }
+      function closeSearch() { searchPanel.classList.remove('is-open'); }
+      document.querySelectorAll('[data-open-search]').forEach(b => b.addEventListener('click', openSearch));
+      document.querySelectorAll('[data-close-search]').forEach(b => b.addEventListener('click', closeAll));
 
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+      const index = [
+        { t: 'Consent to Establish (CTE)', c: 'Capability', h: '#capabilities' },
+        { t: 'Consent to Operate (CTO) & Renewal', c: 'Capability', h: '#capabilities' },
+        { t: 'CTO Renewal checklist', c: 'Insight', h: '#insights' },
+        { t: 'Groundwater NOC (CGWA)', c: 'Capability', h: '#capabilities' },
+        { t: 'Hydrogeological Studies & Surveys', c: 'Capability', h: '#capabilities' },
+        { t: 'Environmental Clearance (SEIAA)', c: 'Capability', h: '#capabilities' },
+        { t: 'Stack Monitoring and Ambient Air', c: 'Envirolab', h: '#envirolab' },
+        { t: 'Water and Effluent Testing', c: 'Envirolab', h: '#envirolab' },
+        { t: 'Manufacturing & Process Industry', c: 'Sector', h: '#sectors' },
+        { t: 'Commercial Real Estate', c: 'Sector', h: '#sectors' },
+        { t: 'Mining & Minerals', c: 'Sector', h: '#sectors' },
+        { t: 'CTE vs CTO comparison table', c: 'Regulatory Brief', h: '#regulatory' },
+        { t: 'Red, Orange, Green and White categories', c: 'Regulatory Brief', h: '#regulatory' }
+      ];
+      const results = document.getElementById('searchResults');
+      function renderResults(q) {
+        q = q.trim().toLowerCase();
+        results.innerHTML = '';
+        if (!q) return;
+        const words = q.split(/\s+/);
+        const hits = index.filter(i => { const s = (i.t + ' ' + i.c).toLowerCase(); return words.every(w => s.includes(w)); });
+        if (!hits.length) {
+          results.innerHTML = '<li class="py-5 text-slate-500">No exact match found. <a href="#contact" data-result class="text-primary font-semibold">Speak directly to an environmental consultant</a></li>';
+        } else {
+          hits.forEach(i => {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="' + i.h + '" data-result class="group flex items-center justify-between gap-4 py-4"><span><span class="block text-[11px] font-bold tracking-[2px] uppercase text-slate-400">' + i.c + '</span><span class="block mt-1 text-base sm:text-lg font-semibold text-heading group-hover:text-primary">' + i.t + '</span></span><span class="text-primary text-xl">&rarr;</span></a>';
+            results.appendChild(li);
+          });
+        }
+        results.querySelectorAll('[data-result]').forEach(a => a.addEventListener('click', closeAll));
+      }
+      searchInput.addEventListener('input', e => renderResults(e.target.value));
+      document.getElementById('searchForm').addEventListener('submit', e => { e.preventDefault(); const a = results.querySelector('a'); if (a) a.click(); });
+      document.querySelectorAll('.search-chip').forEach(c => c.addEventListener('click', () => { searchInput.value = c.textContent; renderResults(c.textContent); }));
+
+      /* ---------- Hero Slider ---------- */
+      const slides = document.querySelectorAll('.hero-slide');
+      const tabs = document.querySelectorAll('.hero-tab');
+      let cur = 0, timer;
+      function go(n) {
+        slides[cur].classList.remove('is-active'); tabs[cur].classList.remove('is-active');
+        cur = (n + slides.length) % slides.length;
+        slides[cur].classList.add('is-active');
+        void tabs[cur].offsetWidth;
+        tabs[cur].classList.add('is-active');
+        clearTimeout(timer); timer = setTimeout(() => go(cur + 1), 7000);
+      }
+      tabs.forEach(t => t.addEventListener('click', () => go(+t.dataset.go)));
+      timer = setTimeout(() => go(1), 7000);
+
+      /* ---------- Capability Desktop Preview Hover ---------- */
+      const capImgs = document.querySelectorAll('[data-cap-img]');
+      document.querySelectorAll('.cap-row').forEach(row => row.addEventListener('mouseenter', () => {
+        capImgs.forEach(img => img.classList.toggle('is-active', img.dataset.capImg === row.dataset.idx));
+      }));
+
+      /* ---------- Scope Enquiry Cart ---------- */
+      let cart = [];
+      const cartList = document.getElementById('cartList');
+      const cartEmpty = document.getElementById('cartEmpty');
+      function toast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg; t.classList.add('is-show');
+        clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('is-show'), 2400);
+      }
+      function syncCart() {
+        document.getElementById('cartCount').textContent = cart.length;
+        document.getElementById('cartCountText').textContent = cart.length;
+        cartEmpty.classList.toggle('hidden', cart.length > 0);
+        cartList.innerHTML = '';
+        cart.forEach((name, i) => {
+          const li = document.createElement('li');
+          li.className = 'flex items-center justify-between gap-4 py-4';
+          li.innerHTML = '<span class="flex items-baseline gap-4"><span class="text-xs font-bold text-secondary-600">' + String(i + 1).padStart(2, '0') + '</span><span class="font-semibold text-heading text-sm sm:text-base"></span></span><button type="button" class="text-xs font-bold uppercase tracking-wide text-slate-400 hover:text-red-600">Remove</button>';
+          li.querySelector('.font-semibold').textContent = name;
+          li.querySelector('button').addEventListener('click', () => toggleService(name));
+          cartList.appendChild(li);
         });
+        document.querySelectorAll('.cap-row').forEach(row => {
+          const inCart = cart.includes(row.dataset.service);
+          row.classList.toggle('in-cart', inCart);
+          row.querySelector('.add-label').textContent = inCart ? '✓ Added' : '+ Add to enquiry';
+        });
+        document.getElementById('fServices').value = cart.join(', ');
+      }
+      function toggleService(name) {
+        const i = cart.indexOf(name);
+        if (i > -1) { cart.splice(i, 1); toast('Removed from scope enquiry'); }
+        else { cart.push(name); toast('Added to scope enquiry: ' + name); }
+        syncCart();
+      }
+      document.querySelectorAll('.cap-row .add-btn').forEach(btn => btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleService(btn.closest('.cap-row').dataset.service);
+      }));
+      syncCart();
+
+      /* ---------- Regulatory Tabs ---------- */
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('is-active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        document.getElementById(btn.dataset.tab).classList.add('is-active');
+      }));
+
+      /* ---------- Testimonials Slider ---------- */
+      const quotes = document.querySelectorAll('.quote-slide');
+      let q = 0;
+      function showQuote(n) {
+        quotes[q].classList.remove('is-active');
+        q = (n + quotes.length) % quotes.length;
+        quotes[q].classList.add('is-active');
+        document.getElementById('qIdx').textContent = String(q + 1).padStart(2, '0');
+      }
+      document.getElementById('qNext').addEventListener('click', () => showQuote(q + 1));
+      document.getElementById('qPrev').addEventListener('click', () => showQuote(q - 1));
+
+      /* ---------- FAQ Accordion ---------- */
+      document.querySelectorAll('.faq-btn').forEach(btn => btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('is-open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
+        if (!wasOpen) item.classList.add('is-open');
+      }));
+
+      /* ---------- Reveal & Count-Up Observer ---------- */
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          if (el.dataset.count) {
+            const end = +el.dataset.count, dur = 1600, start = performance.now();
+            const tick = now => {
+              const p = Math.min((now - start) / dur, 1);
+              el.textContent = Math.floor(end * (1 - Math.pow(1 - p, 3))).toLocaleString('en-IN');
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          } else {
+            el.classList.add('is-visible');
+          }
+          io.unobserve(el);
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('[data-count], .reveal').forEach(el => io.observe(el));
+
+      /* ---------- Contact Form Submission ---------- */
+      document.getElementById('contactForm').addEventListener('submit', e => {
+        e.preventDefault();
+        const n = document.getElementById('fName'), p = document.getElementById('fPhone');
+        if (!n.value.trim() || !p.value.trim()) { toast('Please provide your name and phone number'); return; }
+        e.target.reset(); cart = []; syncCart();
+        toast('Thank you. A senior environmental consultant will contact you within one working day.');
       });
-    }
+      document.getElementById('newsForm').addEventListener('submit', e => {
+        e.preventDefault(); e.target.reset();
+        toast('Subscribed to Aravalli regulatory briefs.');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
   </script>
-
 </body>
 </html>
